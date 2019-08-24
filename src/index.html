@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Angular总结</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- 
+    对于jQuery这种在页面中引用的静态资源文件应放在assets文件夹下，如果不这样放置会引起浏览器报404，如果assets文件的位置发生了变化
+    那么在angular.json文件中需要重新配置assets的路径，建议是不要改动位置，所有静态资源包括bootstrap，js库，图片等均需要放在这个文件下，
+    经过验证，如果不放在这个文件下，而是放置在任何位置，即使是src文件下，哪怕是路径是对的，同样会导致404错误，关于assets这个文件夹，
+    angular官网的解释是：包含图像文件和其它文件，当构建应用时会被原样复制到构建目标中。
+   -->
+  <script type="text/javascript" src="assets\jquery\1.12.4\jquery.js"></script>
+</head>
+
+<body>
+  <app-root></app-root>
+  <script>
+    // 因为是单页应用，该方式仍然是无法禁止后退的，但是可以尝试通过监听路由变化的方式进行一些限制
+    $(function () {
+      function fobidden_back() {
+        //防止页面后退
+        history.pushState(null, null, document.URL);
+        window.addEventListener('popstate', function () {
+          history.pushState(null, null, document.URL);
+        });
+      }
+      fobidden_back();
+    });
+
+  </script>
+</body>
+
+</html>

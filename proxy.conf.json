@@ -1,0 +1,11 @@
+{
+  "/api": {
+    "target": "http://localhost:3000"
+  },
+  "/uploadFile": {
+    "target": "http://localhost:3000"
+  },
+  "/fileReader": {
+    "target": "http://localhost:3000"
+  }
+}

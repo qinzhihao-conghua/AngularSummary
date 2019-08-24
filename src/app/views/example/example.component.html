@@ -1,0 +1,40 @@
+<h1 style="text-align:center;">angular常用指令</h1>
+<div style="width:100%;text-align:center;">
+  <div style="width:800px;margin:0 auto;text-align:center;">
+    <p>ngClick--->绑定点击事件</p>
+    <p>ngModel--->双向绑定，通常是接收用户输入的值</p>
+    <p>ngIf--->if判断，为真则显示该部分，为假则不显示</p>
+    <p>ngFor--->for循环，循环输出或显示</p>
+    <p>ngSwitch--->switch语句，符合条件则显示</p>
+    <p>ngBlur--->失去焦点事件</p>
+    <p>ngClass--->设置css类</p>
+    <p>ngStyle--->设置样式</p>
+    <p>ngKeyUp--->按键抬起事件</p>
+    <button class="btn btn-primary" style="margin-right: 15px;" (click)="getMessage()">获取service里的消息</button>{{message}}
+  </div>
+</div>
+<h1 style="text-align:center;">angular常用生命周期钩子</h1>
+<div style="width:100%;text-align:center;">
+  <div style="width:800px;margin:0 auto;text-align:center;">
+    <p>angular生命周期钩子有8个，但是一下这两个是最为常用</p>
+    <p>ngOnInit()--->组件初始化时调用，仅调用一次</p>
+    <p>
+      ngAfterViewInit()--->组件相关视图初始化后调用，当这个钩子调用之后，说明视图的相关组件都已经组装好，
+      这个时候是不允许修改模板上的值的，因为这会导致视图的改变，如果修改了就抛出异常，要解决这个异常就是
+      将改变这个值的动作放入定时器setTimeOut中，这是通过在js的另一个运行周期中运行这个代码，从而绕开angualr的变更检查
+    </p>
+    <p>
+      ngDoCheck--->带有check的所有钩子在angualr的生命周期中会调用多次，这个钩子会检测页面上任何所有的变化
+      即使是在页面上的随意点击都会触发，因此在实现这个钩子时要注意性能的问题
+    </p>
+  </div>
+</div>
+<h1 style="text-align:center;">angular各组件间数据传输</h1>
+<div style="width:100%;text-align:center;">
+  <div style="width:800px;margin:0 auto;text-align:center;">
+    <p>angular中各组件进行数据传输可以使用路由的方式和@input()、@output()方式，如果主要是进行数据的传输，推荐使用@input()、@output()方式
+      因为使用路由的方式是通过url的方式，能传输的数据有限，不能够传输对象、数组等数据。@input()是父组件往子组件传输数据；@output()是父组件往子组件传输数据
+      往父组件传输数据
+    </p>
+  </div>
+</div>
