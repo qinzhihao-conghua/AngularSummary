@@ -1,10 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
-var multer = require('multer');
+const multer = require('multer');
 
-var storage = multer.diskStorage({
+const storage = multer.diskStorage({
     destination: function (req, file, cb) {
+        // 如果没有uploads文件夹会报错，暂不处理没有文件夹的问题
         cb(null, 'uploads/')
     },
     filename: function (req, file, cb) {
@@ -15,7 +16,7 @@ var storage = multer.diskStorage({
 // 默认的存储
 // var upload = multer({ dest: 'uploads/' });
 // 设置的存储
-var upload = multer({ storage: storage });
+const upload = multer({ storage: storage });
 
 router.get("/api", (request, response) => {
     console.log("有人请求了");
