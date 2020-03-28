@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'router-child4',
   templateUrl: './router-child4.component.html',
-  styleUrls: ['./router-child4.component.css']
+  styleUrls: ['./router-child4.component.scss']
 })
 export class RouterChild4 {
   constructor(private router: ActivatedRoute) {

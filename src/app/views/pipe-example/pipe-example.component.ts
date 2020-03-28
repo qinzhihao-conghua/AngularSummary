@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-pipe',
   templateUrl: './pipe-example.component.html',
-  styleUrls: ['./pipe-example.component.css']
+  styleUrls: ['./pipe-example.component.scss']
 })
 export class PipeExampleComponent implements OnInit {
 
@@ -13,8 +13,8 @@ export class PipeExampleComponent implements OnInit {
   ngOnInit() {
   }
 
-  uperCaseValue:string;
-  onKey(){
+  uperCaseValue: string;
+  onKey() {
     console.log("enter");
   }
 

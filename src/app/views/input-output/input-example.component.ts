@@ -5,12 +5,12 @@ import { MessageService } from 'src/app/service/message.service';
 @Component({
   selector: 'input-example',
   templateUrl: './input-example.component.html',
-  styleUrls: ['./input-example.component.css']
+  styleUrls: ['./input-example.component.scss']
 })
 export class InputExampleComponent {
   constructor(
-    private messageService:MessageService
-  ){
+    private messageService: MessageService
+  ) {
 
   }
   ngOnInit() {
@@ -23,6 +23,7 @@ export class InputExampleComponent {
   sendToChild: string;
   requestData: string;
   getOutput(event: string) {
+    console.log(event);
     this.requestData = event;
   }
 
@@ -38,11 +39,11 @@ export class InputExampleComponent {
   useChildFunction() {
     this.childRecive.childFunction(1);
   }
-  tempValue:string;
-  onBlur(value:string){
-    this.tempValue=value;
+  tempValue: string;
+  onBlur(value: string) {
+    this.tempValue = value;
   }
-  sent(){
+  sent() {
     this.messageService.sentMessage("发送的消息");
   }
 }

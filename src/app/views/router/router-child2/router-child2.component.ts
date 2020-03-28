@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'router-child2',
   templateUrl: './router-child2.component.html',
-  styleUrls: ['./router-child2.component.css']
+  styleUrls: ['./router-child2.component.scss']
 })
 export class RouterChild2 {
   constructor(

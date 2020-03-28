@@ -5,11 +5,11 @@ import { HttpService } from 'src/app/service/http.service';
 @Component({
   selector: 'app-upload',
   templateUrl: './upload.component.html',
-  styleUrls: ['./upload.component.css']
+  styleUrls: ['./upload.component.scss']
 })
 export class UploadComponent {
   constructor(
-    private httpService:HttpService
+    private httpService: HttpService
   ) { }
 
 

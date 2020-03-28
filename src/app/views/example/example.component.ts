@@ -4,23 +4,23 @@ import { MessageService } from 'src/app/service/message.service';
 @Component({
   selector: 'example',
   templateUrl: './example.component.html',
-  styleUrls: ['./example.component.css']
+  styleUrls: ['./example.component.scss']
 })
 export class ExampleComponent {
   constructor(
-    private messageService:MessageService
-  ){
+    private messageService: MessageService
+  ) {
 
   }
   ngOnInit() {
-    
+
   }
   ngAfterViewInit() {
-    
+
   }
-  message:string;
-  getMessage(){
-    this.message=this.messageService.getMessage();
+  message: string;
+  getMessage() {
+    this.message = this.messageService.getMessage();
   }
-  
+
 }
