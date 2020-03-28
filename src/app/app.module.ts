@@ -5,9 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { ExampleComponent } from './views/example/example.component';
-import { InputExampleComponent } from './views/input-output/input-example.component';
-import { OutputComponent } from './views/input-output/out-example/out-example.component';
 import { RouterExample } from './views/router/router-example.component';
 import { RouterChild } from './views/router/router-child/router-child.component';
 import { RouterChild2 } from './views/router/router-child2/router-child2.component';
@@ -21,14 +18,19 @@ import { PipeExampleComponent } from './views/pipe-example/pipe-example.componen
 import { UploadComponent } from './views/upload/upload.component';
 import { CommonModule } from '@angular/common';
 import { FileUploadModule } from 'ng2-file-upload';
+import { ParentComponent } from './views/component-message/parent/parent.component';
+import { ChildrenComponent } from './views/component-message/children/children.component';
+import { CommonDocsComponent } from './views/common-docs/common-docs.component';
+import { HighLightDirective } from './directive/high-light.directive';
+import { UnLessDirective } from './directive/un-less.directive';
 
 @NgModule({
   declarations: [//声明本地组件
     AppComponent,
 
-    ExampleComponent,
-    InputExampleComponent,
-    OutputComponent,
+    CommonDocsComponent,
+    ParentComponent,
+    ChildrenComponent,
     RouterExample,
     RouterChild,
     RouterChild2,
@@ -36,7 +38,9 @@ import { FileUploadModule } from 'ng2-file-upload';
     RouterChild4,
     PipeExampleComponent,
     MyUperCasePipe,
-    UploadComponent
+    UploadComponent,
+    HighLightDirective,
+    UnLessDirective
   ],
   imports: [//导入外部组件，模块
     BrowserModule,

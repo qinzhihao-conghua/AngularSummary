@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { MessageService } from 'src/app/service/message.service';
 
 @Component({
-  selector: 'example',
-  templateUrl: './example.component.html',
-  styleUrls: ['./example.component.scss']
+  selector: 'common-docs',
+  templateUrl: './common-docs.component.html',
+  styleUrls: ['./common-docs.component.scss']
 })
-export class ExampleComponent {
+export class CommonDocsComponent {
   constructor(
     private messageService: MessageService
   ) {
@@ -18,9 +18,14 @@ export class ExampleComponent {
   ngAfterViewInit() {
 
   }
+  condition = false;
   message: string;
   getMessage() {
     this.message = this.messageService.getMessage();
+  }
+  colorAndSize = { color: 'red', size: '24' };
+  test() {
+    this.condition = !this.condition;
   }
 
 }

@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { InputExampleComponent } from './views/input-output/input-example.component';
-import { ExampleComponent } from './views/example/example.component';
 import { RouterExample } from './views/router/router-example.component';
 import { RouterChild } from './views/router/router-child/router-child.component';
 import { RouterChild2 } from './views/router/router-child2/router-child2.component';
@@ -11,11 +9,13 @@ import { LoginGuard } from './guard/login-guard';
 import { LeaveGuard } from './guard/leave-guard';
 import { PipeExampleComponent } from './views/pipe-example/pipe-example.component';
 import { UploadComponent } from './views/upload/upload.component';
+import { ParentComponent } from './views/component-message/parent/parent.component';
+import { CommonDocsComponent } from './views/common-docs/common-docs.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/example', pathMatch: 'full' },
-  { path: 'example', component: ExampleComponent },
-  { path: 'input-example', component: InputExampleComponent },
+  { path: '', redirectTo: '/common-docs', pathMatch: 'full' },
+  { path: 'common-docs', component: CommonDocsComponent },
+  { path: 'component-message', component: ParentComponent },
   {
     path: 'router', component: RouterExample, children: [
       //路由守卫canActivate，满足LoginDuard中的条件之后才允许进入这个组件
@@ -31,7 +31,7 @@ const routes: Routes = [
   // { path: 'router-child4', component: RouterChild4 ,outlet:'auxiliary'},
   { path: 'pipe', component: PipeExampleComponent },
   { path: 'upload', component: UploadComponent },
-  { path: '**', component: ExampleComponent }//通配符
+  { path: '**', component: CommonDocsComponent }//通配符
 ];
 
 @NgModule({

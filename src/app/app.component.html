@@ -1,19 +1,12 @@
-<!-- <h1>{{title}}</h1> -->
-<nav>
-  <!-- <a routerLink="/dashboard">面板</a> -->
-  <!-- <a routerLink="/heroes">菜单</a> -->
-  <button class="btn btn-primary" routerLink="/example">文档</button>
-  <!-- <button class="btn btn-primary" (click)="open()" routerLink="/">开</button> -->
-  <!-- <button class="btn btn-primary" (click)="close()" >关</button> -->
-  <button class="btn btn-primary" routerLink="/input-example">input和output</button>
-  <button class="btn btn-primary" routerLink="/router">路由相关</button>
-  <button class="btn btn-primary" routerLink="/pipe">内置管道</button>
-  <!-- <a routerLink="/pipe">内置管道</a> -->
-  <button class="btn btn-primary" (click)="requesrServer()">请求服务器</button>
-  <button class="btn btn-primary" routerLink="/upload">上传文件</button>
-</nav>
-
-<hr style="border:2px solid red">
-<!-- <app-messages></app-messages> -->
+<div class="main-header">
+  <nav>
+    <a class="a-to-btn" routerLink="/common-docs">文档</a>
+    <a class="a-to-btn" routerLink="/component-message">父子组件通讯</a>
+    <a class="a-to-btn" routerLink="/router">路由相关</a>
+    <a class="a-to-btn" routerLink="/pipe">内置管道</a>
+    <a class="a-to-btn" (click)="requesrServer()">请求服务器</a>
+    <a class="a-to-btn" routerLink="/upload">上传文件</a>
+  </nav>
+</div>
+<hr>
 <router-outlet></router-outlet>
-<!-- <router-outlet name="auxiliary"></router-outlet> -->
