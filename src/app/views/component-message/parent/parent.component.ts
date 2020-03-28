@@ -44,6 +44,6 @@ export class ParentComponent {
     this.tempValue = value;
   }
   sent() {
-    this.messageService.sentMessage("发送的消息");
+    this.messageService.sentMessage("非父子组件通讯成功");
   }
 }

@@ -1,9 +1,13 @@
 .doc {
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 24px;
 
   h1 {
     text-align: center;
+  }
+
+  h3 {
+    color: red;
   }
 
   .doc-comm {

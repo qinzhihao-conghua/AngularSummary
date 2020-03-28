@@ -1,36 +1,44 @@
-<div style="border:1px solid green;width:100%;height:450px;margin:0 auto;position: relative;">
-  <span>我是路由主组件</span>
-  <!-- 
-      添加子路由时，routerLink的值需要在斜杠“/”的前面加“.” 
-      不加“.”时将直接到根路由寻找，如果匹配到相同的路径则显示相应的组件，匹配不到则匹配“**”路径 
-  -->
-  <button class="btn btn-primary" routerLink="./router-child">展示子路由</button>
+<div class="router-main">
+  <h3>我是路由主组件</h3>
   <input type="text" placeholder="要路由传递的值" [(ngModel)]="id">
-  <!-- 
-      关于routerLink的写法参照本页面的写法，有两种方式，一种是写在a标签里的，一种是非a标签里的 
-      a标签中可以使用这种方式：[routerLink]="['./router-child',id,name]" 
-      非a标签中不能有中括号或者什么其他的符号，否则报错或者匹配失败：易出现的问题有：
-      1、[routerLink]="[./router-child]" 该方式直接导致报错，routerLink不需要加中括号 
-      2、routerLink="[./router-child,id]" 该方式导致路径不对，找不到匹配路径，
-      routerLink的值不需要加中括号，添加中括号时，中括号会转码加到路径中导致匹配失败 
-  -->
-  <button class="btn btn-primary" routerLink="./router-child" [queryParams]='{id:id}'>查询参数传值</button>
-  <button class="btn btn-primary" routerLink="./router-child2/{{id}}/{{name}}">路径传值</button>
+  <div class="router-header">
+    <!-- 
+        添加子路由时，routerLink的值需要在斜杠“/”的前面加“.” 
+        不加“.”时将直接到根路由寻找，如果匹配到相同的路径则显示相应的组件，匹配不到则匹配“**”路径 
+    -->
+    <a class="a-to-btn" routerLink="./router-child">展示子路由</a>
 
-  <!-- a标签方式的写法和传值方式 -->
-  <!-- <a [routerLink]="['./router-child2',id,name]">路径传值</a> -->
+    <!-- 
+        关于routerLink的写法参照本页面的写法，有两种方式，一种是写在a标签里的，一种是非a标签里的 
+        a标签中可以使用这种方式：[routerLink]="['./router-child',id,name]" 
+        非a标签中不能有中括号或者什么其他的符号，否则报错或者匹配失败：易出现的问题有：
+        1、[routerLink]="[./router-child]" 该方式直接导致报错，routerLink不需要加中括号 
+        2、routerLink="[./router-child,id]" 该方式导致路径不对，找不到匹配路径，
+        routerLink的值不需要加中括号，添加中括号时，中括号会转码加到路径中导致匹配失败 
+    -->
+    <a class="a-to-btn" routerLink="./router-child" [queryParams]='{id:id}'>查询参数传值</a>
+    <a class="a-to-btn" routerLink="./router-child2/{{id}}/{{name}}">路径传值</a>
 
-  <button class="btn btn-primary" routerLink="./router-child3">配置传值</button>
-  <button class="btn btn-primary" (click)="navigateTO()">navigate跳转</button>
-  <!-- 由于非a标签中不能有中括号，花括号等符号，而由于辅助路由的写法关系，辅助路由只能是写在a标签中 -->
-  <!-- <button class="btn btn-primary" (click)="auxiliaryRouter()" routerLink="outlets:{auxiliary:router-child4}">辅助路由</button> -->
-  <a [routerLink]="[{outlets:{auxiliary:'router-child4'}}]">开辅助路由</a>
-  <a [routerLink]="[{outlets:{auxiliary:null}}]">关辅助路由</a>
+    <!-- a标签方式的写法和传值方式 -->
+    <!-- <a class="a-to-btn" [routerLink]="['./router-child2',id,name]">路径传值</a> -->
 
-  <div style="border:1px solid purple;width:10%;height:350px;margin:0 auto;float: left;position: absolute;top: 68px;left: 0;">
-    <p>展示子路由使用了进入路由的守卫，辅助路由使用了退出路由的守卫</p>
+    <a class="a-to-btn" routerLink="./router-child3">配置传值</a>
+    <a class="a-to-btn" (click)="navigateTO()">navigate跳转</a>
+    <!-- 由于非a标签中不能有中括号，花括号等符号，而由于辅助路由的写法关系，辅助路由只能是写在a标签中 -->
+    <!-- <button class="btn" (click)="auxiliaryRouter()" routerLink="outlets:{auxiliary:router-child4}">辅助路由</button> -->
+    <a class="a-to-btn" [routerLink]="[{outlets:{auxiliary:'router-child4'}}]">开辅助路由</a>
+    <a class="a-to-btn" [routerLink]="[{outlets:{auxiliary:null}}]">关辅助路由</a>
+
   </div>
-  
-  <router-outlet></router-outlet>
-  <router-outlet name="auxiliary"></router-outlet>
+  <div class="router-content">
+    <div class="router-guard">
+      <p>展示子路由使用了进入路由的守卫，辅助路由使用了退出路由的守卫</p>
+    </div>
+    <div class="router-child">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div>
+    <router-outlet name="auxiliary"></router-outlet>
+  </div>
 </div>
