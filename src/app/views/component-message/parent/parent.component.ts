@@ -33,7 +33,7 @@ export class ParentComponent {
     如此定义之后，childRecive将能够访问ChildrenComponent中所有的属性与方法
     @ViewChild的返回值可以是组件类型，也可以是HTML元素类型ElementRef
   */
-  @ViewChild("child")
+  @ViewChild("childrenComponent")
   childRecive: ChildrenComponent;
 
   useChildFunction() {

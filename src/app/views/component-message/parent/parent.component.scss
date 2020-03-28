@@ -1,0 +1,23 @@
+.parent {
+  border: 1px solid red;
+  height: calc(100vh - 184px);
+  min-height: 400px;
+  padding: 16px;
+  display: flex;
+
+  .parent-content {
+    flex: 6;
+
+    h3 {
+      color: red;
+    }
+  }
+
+  .parent-children {
+    flex: 4;
+
+    .children-content {
+      color: #1d1afa;
+    }
+  }
+}

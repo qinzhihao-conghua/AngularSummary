@@ -1,14 +1,14 @@
-<div style="border:1px solid green;width:600px;height:300px;padding: 16px;position: absolute;top: 0;right: 0;margin-top:25px;">
-  <span style="display:block;color: red;">我是子组件</span>
+<div class="children">
+  <h3>我是子组件</h3>
   <input type="text" placeholder="往父组件中传入的值" [(ngModel)]="toParent">
-  <button class="btn btn-primary" (click)="sendToPar()">确定</button>
-  <span style="display:block;">父组件传过来的值:{{requestData}}</span>
-  
-  <div style="border:1px solid darkslateblue;">
+  <button class="btn" (click)="sendToPar()">确定</button>
+  <h3>父组件传过来的值:{{requestData}}</h3>
+  <br>
+  <h3>这是使用ng-content的方式</h3>
+  <div class="children-content">
     <!-- 标记投影点，从父组件投影部分HTML代码片段过来在这个位置显示 -->
     <ng-content select=".header"></ng-content>
     <ng-content></ng-content>
     <ng-content select=".footer"></ng-content>
   </div>
-
 </div>

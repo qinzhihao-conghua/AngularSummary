@@ -1,0 +1,13 @@
+.children {
+  border: 1px solid green;
+  height: 100%;
+  padding: 16px;
+
+  h3 {
+    color: red;
+  }
+
+  .children-content {
+    border: 1px solid darkslateblue;
+  }
+}
