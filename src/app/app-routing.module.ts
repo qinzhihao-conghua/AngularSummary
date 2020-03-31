@@ -11,6 +11,8 @@ import { PipeExampleComponent } from './views/pipe-example/pipe-example.componen
 import { UploadComponent } from './views/upload/upload.component';
 import { ParentComponent } from './views/component-message/parent/parent.component';
 import { CommonDocsComponent } from './views/common-docs/common-docs.component';
+import { AnimationsComponent } from './views/animations/animations.component';
+import { FromComponent } from './views/from/from.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/common-docs', pathMatch: 'full' },
@@ -28,7 +30,8 @@ const routes: Routes = [
       { path: 'router-child4', component: RouterChild4, outlet: 'auxiliary', canDeactivate: [LeaveGuard] }
     ]
   },
-  // { path: 'router-child4', component: RouterChild4 ,outlet:'auxiliary'},
+  { path: 'animation', component: AnimationsComponent },
+  { path: 'from', component: FromComponent },
   { path: 'pipe', component: PipeExampleComponent },
   { path: 'upload', component: UploadComponent },
   { path: '**', component: CommonDocsComponent }//通配符

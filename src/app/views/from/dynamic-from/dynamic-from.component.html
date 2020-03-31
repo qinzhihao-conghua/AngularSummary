@@ -1,0 +1,12 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+  <div *ngFor="let item of controls">
+    <div [ngSwitch]="item.controlType">
+      <!--通过判断类型来显示哪种表单-->
+      <input *ngSwitchCase="'textbox'" [type]="item.type" value="{{item.value}}" [formControlName]="item.key"
+        placeholder="{{item.placeholder}}">
+      <textarea *ngSwitchCase="'textarea'" value="{{item.value}}" rows="{{item.rows}}" [formControlName]="item.key"
+        placeholder="{{item.placeholder}}"></textarea>
+    </div>
+  </div>
+  <button class="btn" type="submit">保存</button>
+</form>

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { RouterExample } from './views/router/router-example.component';
 import { RouterChild } from './views/router/router-child/router-child.component';
@@ -23,6 +23,10 @@ import { ChildrenComponent } from './views/component-message/children/children.c
 import { CommonDocsComponent } from './views/common-docs/common-docs.component';
 import { HighLightDirective } from './directive/high-light.directive';
 import { UnLessDirective } from './directive/un-less.directive';
+import { AnimationsComponent } from './views/animations/animations.component';
+import { DynamicFromComponent } from './views/from/dynamic-from/dynamic-from.component';
+import { ReactiveFromComponent } from './views/from/reactive-from/reactive-from.component';
+import { FromComponent } from './views/from/from.component';
 
 @NgModule({
   declarations: [//声明本地组件
@@ -40,7 +44,11 @@ import { UnLessDirective } from './directive/un-less.directive';
     MyUperCasePipe,
     UploadComponent,
     HighLightDirective,
-    UnLessDirective
+    UnLessDirective,
+    AnimationsComponent,
+    DynamicFromComponent,
+    ReactiveFromComponent,
+    FromComponent
   ],
   imports: [//导入外部组件，模块
     BrowserModule,
@@ -50,7 +58,8 @@ import { UnLessDirective } from './directive/un-less.directive';
     //HttpClient,//如果要使用httpclient模块与服务器进行通讯，则这个模块需要手动导入，否则在服务模块没有相应的智能提示
     HttpClientModule,
     CommonModule,
-    FileUploadModule
+    FileUploadModule,
+    ReactiveFormsModule
   ],
   /*
     路由守卫的类需要放在providers中，providers自动实例化它，使得路由守卫的类起作用

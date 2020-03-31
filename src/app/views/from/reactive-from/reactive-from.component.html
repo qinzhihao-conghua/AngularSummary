@@ -1,0 +1,29 @@
+<form id=formId (ngSubmit)="submitMethod()" #refForm="ngForm">
+  <div>
+    <input type="text" [formControl]="formControl">
+  </div>
+  <button class="btn" type="submit">Submit</button>
+</form>
+
+<form id=formId1 (ngSubmit)="submitMethod1()" [formGroup]="formGroup" #refForm1="ngForm">
+  <div>
+    <input type="text" formControlName="first">
+    <input type="text" formControlName="second">
+    <input type="text" formControlName="third">
+    <!-- <input type="text" formControlName="forth"> -->
+    <textarea name="" id="" cols="30" rows="10" formControlName="forth"></textarea>
+  </div>
+  <button class="btn" type="submit">Submit1</button>
+</form>
+<br>
+<br>
+<br>
+<form id=formId2 (ngSubmit)="submitMethod2()" [formGroup]="formGroup1" #refForm2="ngForm">
+  <div formArrayName="formArray">
+    <div class="form-div" *ngFor="let item of myFormArray.controls;let i=index">
+      <textarea class="form-textarea" name="" id="" cols="30" rows="10" [formControlName]="i"></textarea>
+      <!-- <input type="text" [formControlName]="i"> -->
+    </div>
+  </div>
+  <button class="btn" type="submit">Submit2</button>
+</form>
