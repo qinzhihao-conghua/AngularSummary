@@ -9,7 +9,6 @@ export class AppComponent {
   constructor(
     private http: HttpService
   ) { }
-  title = '覃智浩Angular学习与工作总结';
 
   requesrServer() {
     this.http.getRsponseData().subscribe(data => {

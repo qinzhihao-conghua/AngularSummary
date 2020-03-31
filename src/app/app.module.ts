@@ -27,6 +27,8 @@ import { AnimationsComponent } from './views/animations/animations.component';
 import { DynamicFromComponent } from './views/from/dynamic-from/dynamic-from.component';
 import { ReactiveFromComponent } from './views/from/reactive-from/reactive-from.component';
 import { FromComponent } from './views/from/from.component';
+import { DynamicComponent } from './views/dynamic-component/dynamic.component';
+import { DynamicInstanceComponent } from './views/dynamic-component/dynamic-instance/dynamic-instance.component';
 
 @NgModule({
   declarations: [//声明本地组件
@@ -48,7 +50,9 @@ import { FromComponent } from './views/from/from.component';
     AnimationsComponent,
     DynamicFromComponent,
     ReactiveFromComponent,
-    FromComponent
+    FromComponent,
+    DynamicComponent,
+    DynamicInstanceComponent
   ],
   imports: [//导入外部组件，模块
     BrowserModule,
@@ -69,6 +73,7 @@ import { FromComponent } from './views/from/from.component';
     providers：[{provide:XXXXX,useClass:XXXXX},{provide:YYYYY,useClass:XXXXX},{provide:ZZZZZ,useClass:()=>{}}]
   */
   providers: [LoginGuard, LeaveGuard],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DynamicInstanceComponent]
 })
 export class AppModule { }

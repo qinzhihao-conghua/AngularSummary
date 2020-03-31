@@ -56,6 +56,8 @@ input {
 textarea {
   border: 1px solid #ccc;
   resize: vertical;
+  vertical-align: bottom;
+  padding: 4px;
 }
 
 hr {
@@ -88,7 +90,7 @@ hr {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(59, 182, 225);
+  background-color: #2196f3;
   transition: all .2s;
   border-radius: 6px;
 }
