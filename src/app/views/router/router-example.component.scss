@@ -1,7 +1,6 @@
 .router-main {
   border: 1px solid green;
-  height: calc(100vh - 184px);
-  margin: 16px;
+  height: 100%;
   overflow: auto;
 
   h3 {
@@ -10,6 +9,11 @@
 
   .router-header {
     display: flex;
+    flex-wrap: wrap;
+
+    a {
+      margin: 0 6px 6px 0;
+    }
   }
 
   .router-content {

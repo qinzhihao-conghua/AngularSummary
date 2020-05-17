@@ -29,6 +29,7 @@ import { ReactiveFromComponent } from './views/from/reactive-from/reactive-from.
 import { FromComponent } from './views/from/from.component';
 import { DynamicComponent } from './views/dynamic-component/dynamic.component';
 import { DynamicInstanceComponent } from './views/dynamic-component/dynamic-instance/dynamic-instance.component';
+import { MainContainerComponent } from './views/main-container/main-container.component';
 
 @NgModule({
   declarations: [//声明本地组件
@@ -52,7 +53,8 @@ import { DynamicInstanceComponent } from './views/dynamic-component/dynamic-inst
     ReactiveFromComponent,
     FromComponent,
     DynamicComponent,
-    DynamicInstanceComponent
+    DynamicInstanceComponent,
+    MainContainerComponent
   ],
   imports: [//导入外部组件，模块
     BrowserModule,

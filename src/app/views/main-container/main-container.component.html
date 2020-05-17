@@ -1,0 +1,36 @@
+<div class="main-container-page">
+  <div class="container-lev1  main-container-left">
+    <ul class="nav-container">
+      <li class="container-lev2 nav-item">
+        <a routerLink="/common-docs" routerLinkActive="active">文档</a>
+      </li>
+      <li class="container-lev2 nav-item">
+        <a routerLink="/component-message" routerLinkActive="active">父子组件通讯</a>
+      </li>
+      <li class="container-lev2 nav-item">
+        <a routerLink="/router" routerLinkActive="active">路由相关</a>
+      </li>
+      <li class="container-lev2 nav-item">
+        <a routerLink="/pipe" routerLinkActive="active">内置管道</a>
+      </li>
+      <li class="container-lev2 nav-item">
+        <a (click)="requesrServer()" routerLinkActive="active">请求服务器</a>
+      </li>
+      <li class="container-lev2 nav-item">
+        <a routerLink="/upload" routerLinkActive="active">上传文件</a>
+      </li>
+      <li class="container-lev2 nav-item">
+        <a routerLink="/animation" routerLinkActive="active">动画</a>
+      </li>
+      <li class="container-lev2 nav-item">
+        <a routerLink="/from" routerLinkActive="active">表单使用</a>
+      </li>
+      <li class="container-lev2 nav-item">
+        <a routerLink="/dynamic" routerLinkActive="active">动态组件</a>
+      </li>
+    </ul>
+  </div>
+  <div class="container-lev1 main-container-right">
+    <router-outlet></router-outlet>
+  </div>
+</div>

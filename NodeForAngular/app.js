@@ -1,6 +1,6 @@
 const express = require("express");
 const router = require("./router");
-var bodyParser=require("body-parser");
+var bodyParser = require("body-parser");
 
 const app = express();
 
@@ -16,6 +16,10 @@ app.all(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:4200');
     res.setHeader('Access-Control-Allow-Methods', 'POST');
     res.setHeader('Access-Control-Allow-Headers', 'Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With,token');
+    // 是否可以将对请求的响应暴露给页面。返回true则可以，其他值均不可以。
+    // 允许客户端携带验证信息，例如 cookie 之类的。
+    // 客户端在发起跨域请求的时候，不仅可以携带允许的头，还可以携带验证信息的头
+    // 前端中如果设置了withCredentials: true，意思是客户端想要携带验证信息头
     res.setHeader('Access-Control-Allow-Credentials', true);
     next();
 });

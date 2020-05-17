@@ -1,0 +1,27 @@
+$light-body-bgc:#f3f3f3;
+$light-body-text:#000;
+
+$light-container-lev1-bgc:#fff;
+$light-container-lev1-text:#000;
+$light-container-lev1-border:null;
+
+$light-container-lev2-bgc:#ffeb3bba;
+$light-container-lev2-text:#000;
+$light-container-lev2-border:null;
+
+[zh-theme="light"] {
+  background-color: $light-body-bgc;
+  color: $light-body-text;
+
+  .container-lev1 {
+    background-color: $light-container-lev1-bgc;
+    color: $light-container-lev1-text;
+    border-color: $light-container-lev1-border;
+  }
+
+  .container-lev2 {
+    background-color: $light-container-lev2-bgc;
+    color: $light-container-lev2-text;
+    border-color: $light-container-lev2-border;
+  }
+}
