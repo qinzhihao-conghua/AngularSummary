@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ComponentFactoryResolver, ComponentRef, ViewContainerRef } from '@angular/core';
+import { ZhDialogService } from 'src/app/service/zh-dialog.service';
+import { ZhAlertComponent } from '../zh-alert/zh-alert.component';
 
 @Component({
   selector: 'zh-main-container',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainContainerComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private zhDialogService: ZhDialogService
+  ) { }
 
   ngOnInit() {
   }
 
+  showDialog() {
+    let dialog = this.zhDialogService.open({
+      title: 'service标题头',
+      content: '弹窗内容===弹窗内容',
+      onlySureBtn: false
+    });
+    dialog.subscribe(data => {
+      console.log('service dialog', data);
+    })
+  }
 }

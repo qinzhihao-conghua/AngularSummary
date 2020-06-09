@@ -9,6 +9,19 @@ $light-container-lev2-bgc:#ffeb3bba;
 $light-container-lev2-text:#000;
 $light-container-lev2-border:null;
 
+$light-modal-bgc:#56565699 !default;
+$light-modal-border:null !default;
+$light-modal-container-bgc:#183042 !default;
+$light-modal-container-text:#fff !default;
+$light-modal-container-border:null !default;
+
+$light-button-bgc:#177DDC !default;
+$light-button-text:#fff !default;
+$light-button-border:null !default;
+$light-button-failed-bgc:#2a3f59 !default;
+$light-button-failed-text:#fff !default;
+$light-button-failed-border:null !default;
+
 [zh-theme="light"] {
   background-color: $light-body-bgc;
   color: $light-body-text;
@@ -23,5 +36,34 @@ $light-container-lev2-border:null;
     background-color: $light-container-lev2-bgc;
     color: $light-container-lev2-text;
     border-color: $light-container-lev2-border;
+  }
+
+  // 模态框
+  .theme-modal {
+    background-color: $light-modal-bgc;
+    border-color: $light-modal-border;
+  }
+
+  // 模态框主体
+  .theme-modal-container {
+    background-color: $light-modal-container-bgc;
+    color: $light-modal-container-text;
+    border-color: $light-modal-container-border;
+  }
+
+  // 按钮色
+  .theme-button {
+    background-color: $light-button-bgc;
+    color: $light-button-text;
+    border-color: $light-button-border;
+    outline: none;
+  }
+
+  // 按钮色-失败-取消
+  .theme-button-failed {
+    background-color: $light-button-failed-bgc;
+    color: $light-button-failed-text;
+    border-color: $light-button-failed-border;
+    outline: none;
   }
 }

@@ -1,0 +1,162 @@
+$darkblue-root-bgc:#1a2635 !default;
+$darkblue-root-text:#b4c7e7 !default;
+$darkblue-button-bgc:#177DDC !default;
+$darkblue-button-text:#fff !default;
+$darkblue-button-border:null !default;
+$darkblue-button-failed-bgc:#2a3f59 !default;
+$darkblue-button-failed-text:#fff !default;
+$darkblue-button-failed-border:null !default;
+$darkblue-head-main-bgc:#2a3f59 !default;
+$darkblue-head-main-text:#fff !default;
+$darkblue-head-main-border:null !default;
+$darkblue-head-child-bgc:#212c42 !default;
+$darkblue-head-child-text:#fff !default;
+$darkblue-head-child-border:null !default;
+$darkblue-first-menu-bgc:#1d2e43 !default;
+$darkblue-first-menu-text:rgb(123, 137, 153) !default;
+$darkblue-first-menu-border:null !default;
+$darkblue-second-menu-bgc:#182431 !default;
+$darkblue-second-menu-text:null !default;
+$darkblue-second-menu-border:null !default;
+$darkblue-container-bgc:#101c29 !default;
+$darkblue-container-text:null !default;
+$darkblue-container-border:null !default;
+$darkblue-container-child-bgc:transparent !default;
+$darkblue-container-child-text:null !default;
+$darkblue-container-child-border:null !default;
+$darkblue-modal-bgc:#56565699 !default;
+$darkblue-modal-border:null !default;
+$darkblue-modal-container-bgc:#183042 !default;
+$darkblue-modal-container-text:#fff !default;
+$darkblue-modal-container-border:null !default;
+$darkblue-container-gradient-bgc:linear-gradient(180deg, #1B2B3F 0%, #253B56 32%, #21354E 53%, #121D2C 100%) !default;
+$darkblue-container-gradient-text:#fff !default;
+$darkblue-container-gradient-border:#253d54 !default;
+$darkblue-container-gradient1-bgc: linear-gradient(180deg, #1D2E43 0%, #0F1A27 100%) !default;
+$darkblue-container-gradient1-text:#fff !default;
+$darkblue-container-gradient1-border:#253d54 !default;
+$darkblue-hover-bgc:#335478 !default;
+$darkblue-hover-text:#fff !default;
+$darkblue-hover-border:null !default;
+$darkblue-selected-bgc:#335478 !default;
+$darkblue-selected-text:#fff !default;
+$darkblue-selected-border:null !default;
+$darkblue-table-gradient-bgc:linear-gradient(#1B2B3F, #253B56, #21354E, #121D2C) !default;
+$darkblue-table-gradient-text:#e5e8ea !default;
+$darkblue-table-gradient-border:#253d54 !default;
+
+// 深蓝主题
+[ds-theme="darkblue"] {
+
+  // 主体颜色
+  .theme-root {
+    background-color: $darkblue-root-bgc;
+    color: $darkblue-root-text;
+  }
+
+  // 按钮色
+  .theme-button {
+    background-color: $darkblue-button-bgc;
+    color: $darkblue-button-text;
+    border-color: $darkblue-button-border;
+    outline: none;
+  }
+
+  // 按钮色-失败-取消
+  .theme-button-failed {
+    background-color: $darkblue-button-failed-bgc;
+    color: $darkblue-button-failed-text;
+    border-color: $darkblue-button-failed-border;
+    outline: none;
+  }
+
+  // 普通容器
+  .theme-container {
+    background-color: $darkblue-container-bgc;
+    color: $darkblue-container-text;
+    border-color: $darkblue-container-border;
+  }
+
+  // 普通容器子项
+  .theme-container-child {
+    background-color: $darkblue-container-child-bgc;
+    color: $darkblue-container-child-text;
+    border-color: $darkblue-container-child-border;
+  }
+
+  // 普通容器渐变
+  .theme-container-gradient {
+    background: $darkblue-container-gradient-bgc;
+    color: $darkblue-container-gradient-text;
+    border-color: $darkblue-container-gradient-border;
+  }
+
+  // 普通容器渐变第二种
+  .theme-container-gradient1 {
+    background: $darkblue-container-gradient1-bgc;
+    color: $darkblue-container-gradient1-text;
+    border-color: $darkblue-container-gradient1-border;
+  }
+
+  // 普通容器头部
+  .theme-head-main {
+    background-color: $darkblue-head-main-bgc;
+    color: $darkblue-head-main-text;
+    border-color: $darkblue-head-main-border;
+  }
+
+  // 普通容器头部子项
+  .theme-head-child {
+    background-color: $darkblue-head-child-bgc;
+    color: $darkblue-head-child-text;
+    border-color: $darkblue-head-child-border;
+  }
+
+  // 一级导航条
+  .theme-first-menu {
+    background-color: $darkblue-first-menu-bgc;
+    color: $darkblue-first-menu-text;
+    border-color: $darkblue-first-menu-border;
+  }
+
+  // 二级导航条
+  .theme-second-menu {
+    background-color: $darkblue-second-menu-bgc;
+    color: $darkblue-second-menu-text;
+    border-color: $darkblue-second-menu-border;
+  }
+
+  // 模态框
+  .theme-modal {
+    background-color: $darkblue-modal-bgc;
+    border-color: $darkblue-modal-border;
+  }
+
+  // 模态框主体
+  .theme-modal-container {
+    background-color: $darkblue-modal-container-bgc;
+    color: $darkblue-modal-container-text;
+    border-color: $darkblue-modal-container-border;
+  }
+
+  // hover效果
+  .theme-hover {
+    background-color: $darkblue-hover-bgc;
+    color: $darkblue-hover-text;
+    border-color: $darkblue-hover-border;
+  }
+
+  // 选中效果
+  .theme-selected {
+    background-color: $darkblue-selected-bgc;
+    color: $darkblue-selected-text;
+    border-color: $darkblue-selected-border;
+  }
+
+  // 表格背景渐变
+  .theme-table-gradient {
+    background: $darkblue-table-gradient-bgc;
+    color: $darkblue-table-gradient-text;
+    border-color: $darkblue-table-gradient-border;
+  }
+}

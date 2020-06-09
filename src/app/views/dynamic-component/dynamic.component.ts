@@ -21,9 +21,15 @@ export class DynamicComponent implements OnInit {
   ngOnInit() {
   }
   ngAfterContentInit() {
+    console.log('宿主容器', this.dynamicContainer);
     const component = this.resolve.resolveComponentFactory(DynamicInstanceComponent);
     this.dynamicComponent = this.dynamicContainer.createComponent(component);
     this.dynamicComponent.instance.title = 'bbbbbb';
+  }
+  addNewOne() {
+    const component = this.resolve.resolveComponentFactory(DynamicInstanceComponent);
+    this.dynamicComponent = this.dynamicContainer.createComponent(component);
+    this.dynamicComponent.instance.title = 'ccc';
   }
 
 }

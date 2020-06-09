@@ -30,6 +30,8 @@ import { FromComponent } from './views/from/from.component';
 import { DynamicComponent } from './views/dynamic-component/dynamic.component';
 import { DynamicInstanceComponent } from './views/dynamic-component/dynamic-instance/dynamic-instance.component';
 import { MainContainerComponent } from './views/main-container/main-container.component';
+import { ZhDialogDirective } from './directive/zh-dialog.directive';
+import { ZhAlertComponent } from './views/zh-alert/zh-alert.component';
 
 @NgModule({
   declarations: [//声明本地组件
@@ -54,7 +56,9 @@ import { MainContainerComponent } from './views/main-container/main-container.co
     FromComponent,
     DynamicComponent,
     DynamicInstanceComponent,
-    MainContainerComponent
+    MainContainerComponent,
+    ZhDialogDirective,
+    ZhAlertComponent
   ],
   imports: [//导入外部组件，模块
     BrowserModule,
@@ -76,6 +80,6 @@ import { MainContainerComponent } from './views/main-container/main-container.co
   */
   providers: [LoginGuard, LeaveGuard],
   bootstrap: [AppComponent],
-  entryComponents: [DynamicInstanceComponent]
+  entryComponents: [DynamicInstanceComponent, ZhAlertComponent]
 })
 export class AppModule { }
