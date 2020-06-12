@@ -8,6 +8,9 @@
       <p>ngFor--->for循环，循环输出或显示</p>
       <p [zhHighLight]="colorAndSize">ngSwitch--->switch语句，符合条件则显示</p>
       <button class="btn" (click)="test()">自定义结构型指令</button>
+      <button class="btn" (click)="openAlert()">alert组件</button>
+      <zh-alert *ngIf="opendialog" [title]="'组件实现测试'" [content]="'内容组件实现测试'" (operation)="alertOperation($event)">
+      </zh-alert>
       <p *zhUnLess="condition">ngBlur--->失去焦点事件</p>
       <p>ngClass--->设置css类</p>
       <p>ngStyle--->设置样式</p>

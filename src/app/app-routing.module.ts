@@ -14,6 +14,8 @@ import { CommonDocsComponent } from './views/common-docs/common-docs.component';
 import { AnimationsComponent } from './views/animations/animations.component';
 import { FromComponent } from './views/from/from.component';
 import { DynamicComponent } from './views/dynamic-component/dynamic.component';
+import { ZhCheckboxComponent } from './views/zh-checkbox/zh-checkbox.component';
+import { ZhRadioComponent } from './views/zh-radio/zh-radio.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/common-docs', pathMatch: 'full' },
@@ -36,6 +38,8 @@ const routes: Routes = [
   { path: 'animation', component: AnimationsComponent },
   { path: 'from', component: FromComponent },
   { path: 'dynamic', component: DynamicComponent },
+  { path: 'radio', component: ZhRadioComponent },
+  { path: 'checkbox', component: ZhCheckboxComponent },
   { path: '**', component: CommonDocsComponent }//通配符
 ];
 

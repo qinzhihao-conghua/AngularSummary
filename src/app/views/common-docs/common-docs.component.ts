@@ -20,12 +20,20 @@ export class CommonDocsComponent {
   }
   condition = false;
   message: string;
+  opendialog = false;
   getMessage() {
     this.message = this.messageService.getMessage();
   }
   colorAndSize = { color: 'red', size: '24' };
   test() {
     this.condition = !this.condition;
+  }
+  openAlert() {
+    this.opendialog = true;
+  }
+  alertOperation(value) {
+    console.log(value);
+    this.opendialog = false;
   }
 
 }

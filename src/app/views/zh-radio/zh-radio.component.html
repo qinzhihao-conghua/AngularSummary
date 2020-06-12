@@ -1,0 +1,9 @@
+<!-- <ng-container *ngFor="let item of receiveData;let i=index;"> -->
+<div *ngFor="let item of receiveData;let i=index;" class="radio-container">
+  <input id="{{item.id}}" type="radio" name="{{item.key}}" [checked]="item.check" [disabled]="dsDisabled"
+    value="{{item.value}}">
+  <label for="{{item.id}}" class="label-for-radio" [ngClass]="checkStyle(i)" (click)="radioCheck(item.value,i)">
+    <span>{{item.name}}</span>
+  </label>
+</div>
+<!-- </ng-container> -->

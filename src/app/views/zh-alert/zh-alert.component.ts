@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
-  selector: 'zh-zh-alert',
+  selector: 'zh-alert',
   templateUrl: './zh-alert.component.html',
   styleUrls: ['./zh-alert.component.scss']
 })

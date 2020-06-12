@@ -32,6 +32,8 @@ import { DynamicInstanceComponent } from './views/dynamic-component/dynamic-inst
 import { MainContainerComponent } from './views/main-container/main-container.component';
 import { ZhDialogDirective } from './directive/zh-dialog.directive';
 import { ZhAlertComponent } from './views/zh-alert/zh-alert.component';
+import { ZhRadioComponent } from './views/zh-radio/zh-radio.component';
+import { ZhCheckboxComponent } from './views/zh-checkbox/zh-checkbox.component';
 
 @NgModule({
   declarations: [//声明本地组件
@@ -58,7 +60,9 @@ import { ZhAlertComponent } from './views/zh-alert/zh-alert.component';
     DynamicInstanceComponent,
     MainContainerComponent,
     ZhDialogDirective,
-    ZhAlertComponent
+    ZhAlertComponent,
+    ZhRadioComponent,
+    ZhCheckboxComponent
   ],
   imports: [//导入外部组件，模块
     BrowserModule,
