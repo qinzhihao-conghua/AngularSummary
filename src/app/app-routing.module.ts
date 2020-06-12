@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { RouterExample } from './views/router/router-example.component';
-import { RouterChild } from './views/router/router-child/router-child.component';
-import { RouterChild2 } from './views/router/router-child2/router-child2.component';
-import { RouterChild3 } from './views/router/router-child3/router-child3.component';
-import { RouterChild4 } from './views/router/router-child4/router-child4.component';
-import { LoginGuard } from './guard/login-guard';
-import { LeaveGuard } from './guard/leave-guard';
-import { PipeExampleComponent } from './views/pipe-example/pipe-example.component';
-import { UploadComponent } from './views/upload/upload.component';
-import { ParentComponent } from './views/component-message/parent/parent.component';
-import { CommonDocsComponent } from './views/common-docs/common-docs.component';
-import { AnimationsComponent } from './views/animations/animations.component';
-import { FromComponent } from './views/from/from.component';
-import { DynamicComponent } from './views/dynamic-component/dynamic.component';
-import { ZhCheckboxComponent } from './views/zh-checkbox/zh-checkbox.component';
-import { ZhRadioComponent } from './views/zh-radio/zh-radio.component';
+import { LoginGuard } from './ng-summary/guard/login-guard';
+import { LeaveGuard } from './ng-summary/guard/leave-guard';
+import { CommonDocsComponent } from './ng-summary/views/common-docs/common-docs.component';
+import { ParentComponent } from './ng-summary/views/component-message/parent/parent.component';
+import { RouterExample } from './ng-summary/views/router/router-example.component';
+import { RouterChild } from './ng-summary/views/router/router-child/router-child.component';
+import { RouterChild2 } from './ng-summary/views/router/router-child2/router-child2.component';
+import { RouterChild3 } from './ng-summary/views/router/router-child3/router-child3.component';
+import { RouterChild4 } from './ng-summary/views/router/router-child4/router-child4.component';
+import { PipeExampleComponent } from './ng-summary/views/pipe-example/pipe-example.component';
+import { UploadComponent } from './ng-summary/views/upload/upload.component';
+import { AnimationsComponent } from './ng-summary/views/animations/animations.component';
+import { FromComponent } from './ng-summary/views/from/from.component';
+import { DynamicComponent } from './ng-summary/views/dynamic-component/dynamic.component';
+import { ZhRadioComponent } from './ng-summary/views/zh-radio/zh-radio.component';
+import { ZhCheckboxComponent } from './ng-summary/views/zh-checkbox/zh-checkbox.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/common-docs', pathMatch: 'full' },

@@ -1,6 +1,5 @@
-import { Component, OnInit, ComponentFactoryResolver, ComponentRef, ViewContainerRef } from '@angular/core';
-import { ZhDialogService } from 'src/app/service/zh-dialog.service';
-import { ZhAlertComponent } from '../zh-alert/zh-alert.component';
+import { Component, OnInit } from '@angular/core';
+import { ZhDialogService } from '../../service/zh-dialog.service';
 
 @Component({
   selector: 'zh-main-container',

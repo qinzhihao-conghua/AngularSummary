@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpService } from './service/http.service';
+import { HttpService } from './ng-summary/service/http.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

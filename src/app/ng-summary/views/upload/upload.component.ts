@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FileUploader, FileItem } from 'ng2-file-upload';
-import { HttpService } from 'src/app/service/http.service';
+import { HttpService } from '../../service/http.service';
 
 @Component({
   selector: 'app-upload',
