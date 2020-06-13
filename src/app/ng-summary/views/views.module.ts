@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CommonDocsComponent } from './common-docs/common-docs.component';
-import { ParentComponent } from './component-message/parent/parent.component';
-import { ChildrenComponent1 } from './component-message/children1/children1.component';
 import { RouterExample } from './router/router-example.component';
 import { RouterChild } from './router/router-child/router-child.component';
 import { RouterChild2 } from './router/router-child2/router-child2.component';
@@ -28,13 +26,10 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
 import { FileUploadModule } from 'ng2-file-upload';
 import { ZhAlertComponent } from '../zh-common/zh-alert/zh-alert.component';
 import { ZhCommonModule } from '../zh-common/zh-common.module';
-import { Children2Component } from './component-message/children2/children2.component';
 
 @NgModule({
   declarations: [
     CommonDocsComponent,
-    ParentComponent,
-    ChildrenComponent1,
     RouterExample,
     RouterChild,
     RouterChild2,
@@ -52,8 +47,7 @@ import { Children2Component } from './component-message/children2/children2.comp
     DynamicComponent,
     DynamicInstanceComponent,
     MainContainerComponent,
-    ZhDialogDirective,
-    Children2Component
+    ZhDialogDirective
   ],
   imports: [
     AppRoutingModule,
@@ -68,8 +62,6 @@ import { Children2Component } from './component-message/children2/children2.comp
   ],
   exports: [
     CommonDocsComponent,
-    ParentComponent,
-    ChildrenComponent1,
     RouterExample,
     RouterChild,
     RouterChild2,

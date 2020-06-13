@@ -3,7 +3,7 @@ import { FileUploader, FileItem } from 'ng2-file-upload';
 import { HttpService } from '../../service/http.service';
 
 @Component({
-  selector: 'app-upload',
+  selector: 'zh-upload',
   templateUrl: './upload.component.html',
   styleUrls: ['./upload.component.scss']
 })

@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
-  selector: 'router-child4',
+  selector: 'zh-router-child4',
   templateUrl: './router-child4.component.html',
   styleUrls: ['./router-child4.component.scss']
 })

@@ -1,0 +1,13 @@
+.parent2{
+    border: 1px solid red;
+    height: 100%;
+    min-height: 400px;
+    padding: 16px;
+    display: flex;
+    .left{
+        flex: 6;
+    }
+    .right{
+        flex: 4;
+    }
+}

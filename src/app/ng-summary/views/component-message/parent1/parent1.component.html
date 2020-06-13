@@ -1,14 +1,8 @@
 <div class="parent">
   <div class="parent-content">
-    <h3>我是父组件</h3>
+    <h3>我是父组件1</h3>
     <input type="text" placeholder="往子组件中传入的值" [(ngModel)]="sendToChild">
     <h3>子组件传过来的值：{{requestData}}</h3>
-    <p>
-      需要指出的一点是：当父组件向子组件传值的时候回触发ngOnChanges这个生命周期钩子，
-      这个钩子的第一次调用比ngOnInit还要早，此后如果检测到有父组件向子组件传值还会在触发，但是要注意的是，所传的值是值类型的才会触发，引用类型的的不会触发，
-      至于这个钩子的触发其实对于页面数据的展示是不会有什么影响的，不管你传的是值类型的值或者是引用类相关的值，最终都会传递到子组件，如果是直接在页面显示
-      也不影响该数据的最终展示。
-    </p>
     <button class="btn" (click)="useChildFunction()">调用子组件的方法1</button>
     <button class="btn" (click)="childrenComponent.childFunction(2)">调用子组件的方法2</button>
     <input #inputValue type="text" name="" id="" placeholder="模板引用变量"
@@ -25,17 +19,16 @@
     之后，在这个变量所在的HTML页面的任何位置都能使用这个变量（在模板中书写的DOM、子组件和指令中定义了这个变量，
     那它指向的就是这个DOM、子组件和指令所在的对象），参考“调用子组件的方法2”中click的写法
   -->
-  <children1 class="parent-children" #childrenComponent1 [requestData]="sendToChild" (sendToParent)="getOutput($event)">
+  <zh-children1 class="parent-children" #children1Component [requestData]="sendToChild"
+    (sendToParent)="getOutput($event)">
     <!-- 
       选择器之间是可以写HTML代码片段的，这些片段将会显示在这个组件（outcomponent）的模板中，
       前提之一是这个组件的模板中有调用了ng-content指令，一般的关系是从父组件到子组件，这里
       还可以进行插值绑定获取其他的数据的绑定等，所绑定的值是父组件的值
     -->
-
     <div class="header children-content">这是头：这个是在父组件中的写的代码显示到了子组件中</div>
     <div>这个是在父组件中的写的代码显示到了子组件中</div>
     <div class="footer children-content">这是脚：这个是在父组件中的写的代码显示到了子组件中</div>
-  </children1>
-  <zh-children2></zh-children2>
+  </zh-children1>
 
 </div>

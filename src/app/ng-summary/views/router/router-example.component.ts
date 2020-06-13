@@ -1,9 +1,8 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { LoginGuard } from '../../guard/login-guard';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'router-example',
+  selector: 'zh-router-example',
   templateUrl: './router-example.component.html',
   styleUrls: ['./router-example.component.scss']
 })

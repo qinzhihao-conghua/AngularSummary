@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 
 @Component({
-  selector: 'app-pipe',
+  selector: 'zh-pipe',
   templateUrl: './pipe-example.component.html',
   styleUrls: ['./pipe-example.component.scss']
 })

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from 'src/app/ng-summary/service/message.service';
 
 @Component({
   selector: 'zh-children2',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Children2Component implements OnInit {
 
-  constructor() { }
+  constructor(
+    private messageService: MessageService
+  ) { }
 
   ngOnInit() {
   }
+  message: string;
 
+  getMessage() {
+    this.message = this.messageService.getMessage();
+  }
 }

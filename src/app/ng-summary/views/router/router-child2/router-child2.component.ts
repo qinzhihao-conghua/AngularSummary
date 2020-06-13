@@ -1,9 +1,9 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
-  selector: 'router-child2',
+  selector: 'zh-router-child2',
   templateUrl: './router-child2.component.html',
   styleUrls: ['./router-child2.component.scss']
 })

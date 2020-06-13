@@ -1,11 +1,11 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'children1',
+  selector: 'zh-children1',
   templateUrl: './children1.component.html',
   styleUrls: ['./children1.component.scss']
 })
-export class ChildrenComponent1 {
+export class Children1Component {
   @Input()
   requestData: string;
   @Output()

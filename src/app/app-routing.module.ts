@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginGuard } from './ng-summary/guard/login-guard';
 import { LeaveGuard } from './ng-summary/guard/leave-guard';
 import { CommonDocsComponent } from './ng-summary/views/common-docs/common-docs.component';
-import { ParentComponent } from './ng-summary/views/component-message/parent/parent.component';
 import { RouterExample } from './ng-summary/views/router/router-example.component';
 import { RouterChild } from './ng-summary/views/router/router-child/router-child.component';
 import { RouterChild2 } from './ng-summary/views/router/router-child2/router-child2.component';
@@ -20,7 +19,10 @@ import { ZhCheckboxComponent } from './ng-summary/zh-common/zh-checkbox/zh-check
 const routes: Routes = [
   { path: '', redirectTo: '/common-docs', pathMatch: 'full' },
   { path: 'common-docs', component: CommonDocsComponent },
-  { path: 'component-message', component: ParentComponent },
+  {
+    path: 'component-message',
+    loadChildren: './ng-summary/views/component-message/component-message.module#ComponentMessageModule'
+  },
   {
     path: 'router', component: RouterExample, children: [
       //路由守卫canActivate，满足LoginDuard中的条件之后才允许进入这个组件

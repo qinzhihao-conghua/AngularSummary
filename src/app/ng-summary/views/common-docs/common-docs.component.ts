@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MessageService } from '../../service/message.service';
 
 @Component({
   selector: 'common-docs',
@@ -8,7 +7,7 @@ import { MessageService } from '../../service/message.service';
 })
 export class CommonDocsComponent {
   constructor(
-    private messageService: MessageService
+
   ) {
 
   }
@@ -19,9 +18,4 @@ export class CommonDocsComponent {
 
   }
 
-  message: string;
-
-  getMessage() {
-    this.message = this.messageService.getMessage();
-  }
 }

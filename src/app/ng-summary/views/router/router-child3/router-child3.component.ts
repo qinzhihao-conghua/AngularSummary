@@ -1,10 +1,9 @@
-import { Component, Input, Output, EventEmitter, Pipe } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { pipe } from '@angular/core/src/render3';
 
 
 @Component({
-  selector: 'router-child3',
+  selector: 'zh-router-child3',
   templateUrl: './router-child3.component.html',
   styleUrls: ['./router-child3.component.scss']
 })
