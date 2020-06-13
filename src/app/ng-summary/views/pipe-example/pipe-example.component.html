@@ -1,5 +1,5 @@
 <div class="pipe-container">
-  <input type="text" (keyup.enter)="onKey(event)" [(ngModel)]="uperCaseValue">{{uperCaseValue | myUperCase}}
+  <input type="text" (keyup.enter)="onKey($event)" [(ngModel)]="uperCaseValue">{{uperCaseValue | myUperCase}}
   <p>DatePipe：日期管道，格式化日期，纯管道 </p>
   <p>JsonPipe：将输入数据对象经过JSON.stringify()方法转换后输出对象字符串，非纯管道</p>
   <p>UpperCasePipe：文本中所有小写字母全转换为字母，纯</p>

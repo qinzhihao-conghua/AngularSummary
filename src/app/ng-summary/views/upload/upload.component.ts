@@ -30,10 +30,10 @@ export class UploadComponent {
     this.uploader.onAfterAddingFile = (file) => { file.withCredentials = false; };
   }
 
-  selectedFileOnChanged() {
+  selectedFileOnChanged(e: Event) {
   }
 
-  uploadFile() {
+  uploadFile(e: Event) {
 
     // 这个解决跨域的方法也无效
     // this.uploader.onBeforeUploadItem = (fileItem: FileItem) => {

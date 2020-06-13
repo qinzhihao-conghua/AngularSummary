@@ -15,8 +15,8 @@ export class PipeExampleComponent implements OnInit {
   condition = false;
   colorAndSize = { color: 'red', size: '24' };
   uperCaseValue: string;
-  onKey() {
-    console.log("enter");
+  onKey(e: Event) {
+    console.log("enter", e);
   }
   test() {
     this.condition = !this.condition;

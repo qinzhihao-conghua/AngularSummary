@@ -4,8 +4,6 @@ import { CommonDocsComponent } from './common-docs/common-docs.component';
 import { PipeExampleComponent } from './pipe-example/pipe-example.component';
 import { MyUperCasePipe } from '../pipe/my-uper-case.pipe';
 import { UploadComponent } from './upload/upload.component';
-import { HighLightDirective } from '../directive/high-light.directive';
-import { UnLessDirective } from '../directive/un-less.directive';
 import { AnimationsComponent } from './animations/animations.component';
 import { DynamicFromComponent } from './from/dynamic-from/dynamic-from.component';
 import { ReactiveFromComponent } from './from/reactive-from/reactive-from.component';
@@ -13,7 +11,6 @@ import { FromComponent } from './from/from.component';
 import { DynamicComponent } from './dynamic-component/dynamic.component';
 import { DynamicInstanceComponent } from './dynamic-component/dynamic-instance/dynamic-instance.component';
 import { MainContainerComponent } from './main-container/main-container.component';
-import { ZhDialogDirective } from '../directive/zh-dialog.directive';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -22,6 +19,7 @@ import { FileUploadModule } from 'ng2-file-upload';
 import { ZhAlertComponent } from '../zh-common/zh-alert/zh-alert.component';
 import { ZhCommonModule } from '../zh-common/zh-common.module';
 import { DirectiveModule } from '../directive/directive.module';
+import { ViewsComponent } from './views.component';
 
 @NgModule({
   declarations: [
@@ -29,8 +27,6 @@ import { DirectiveModule } from '../directive/directive.module';
     PipeExampleComponent,
     MyUperCasePipe,
     UploadComponent,
-    // HighLightDirective,
-    // UnLessDirective,
     AnimationsComponent,
     DynamicFromComponent,
     ReactiveFromComponent,
@@ -38,7 +34,7 @@ import { DirectiveModule } from '../directive/directive.module';
     DynamicComponent,
     DynamicInstanceComponent,
     MainContainerComponent,
-    // ZhDialogDirective
+    ViewsComponent
   ],
   imports: [
     AppRoutingModule,
@@ -57,16 +53,13 @@ import { DirectiveModule } from '../directive/directive.module';
     PipeExampleComponent,
     MyUperCasePipe,
     UploadComponent,
-    // HighLightDirective,
-    // UnLessDirective,
     AnimationsComponent,
     DynamicFromComponent,
     ReactiveFromComponent,
     FromComponent,
     DynamicComponent,
     DynamicInstanceComponent,
-    MainContainerComponent,
-    // ZhDialogDirective
+    MainContainerComponent
   ],
   entryComponents: [DynamicInstanceComponent, ZhAlertComponent]
 })
