@@ -14,8 +14,8 @@ import { UploadComponent } from './ng-summary/views/upload/upload.component';
 import { AnimationsComponent } from './ng-summary/views/animations/animations.component';
 import { FromComponent } from './ng-summary/views/from/from.component';
 import { DynamicComponent } from './ng-summary/views/dynamic-component/dynamic.component';
-import { ZhRadioComponent } from './ng-summary/views/zh-radio/zh-radio.component';
-import { ZhCheckboxComponent } from './ng-summary/views/zh-checkbox/zh-checkbox.component';
+import { ZhRadioComponent } from './ng-summary/zh-common/zh-radio/zh-radio.component';
+import { ZhCheckboxComponent } from './ng-summary/zh-common/zh-checkbox/zh-checkbox.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/common-docs', pathMatch: 'full' },

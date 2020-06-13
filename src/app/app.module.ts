@@ -25,55 +25,31 @@ import { FromComponent } from './ng-summary/views/from/from.component';
 import { DynamicComponent } from './ng-summary/views/dynamic-component/dynamic.component';
 import { DynamicInstanceComponent } from './ng-summary/views/dynamic-component/dynamic-instance/dynamic-instance.component';
 import { MainContainerComponent } from './ng-summary/views/main-container/main-container.component';
-import { ZhAlertComponent } from './ng-summary/views/zh-alert/zh-alert.component';
-import { ZhRadioComponent } from './ng-summary/views/zh-radio/zh-radio.component';
-import { ZhCheckboxComponent } from './ng-summary/views/zh-checkbox/zh-checkbox.component';
 import { MyUperCasePipe } from './ng-summary/pipe/my-uper-case.pipe';
 import { HighLightDirective } from './ng-summary/directive/high-light.directive';
 import { UnLessDirective } from './ng-summary/directive/un-less.directive';
 import { ZhDialogDirective } from './ng-summary/directive/zh-dialog.directive';
 import { LoginGuard } from './ng-summary/guard/login-guard';
 import { LeaveGuard } from './ng-summary/guard/leave-guard';
+import { ViewsModule } from './ng-summary/views/views.module';
+import { ZhCommonModule } from './ng-summary/zh-common/zh-common.module';
 
 @NgModule({
   declarations: [//声明本地组件
-    AppComponent,
-
-    CommonDocsComponent,
-    ParentComponent,
-    ChildrenComponent,
-    RouterExample,
-    RouterChild,
-    RouterChild2,
-    RouterChild3,
-    RouterChild4,
-    PipeExampleComponent,
-    MyUperCasePipe,
-    UploadComponent,
-    HighLightDirective,
-    UnLessDirective,
-    AnimationsComponent,
-    DynamicFromComponent,
-    ReactiveFromComponent,
-    FromComponent,
-    DynamicComponent,
-    DynamicInstanceComponent,
-    MainContainerComponent,
-    ZhDialogDirective,
-    ZhAlertComponent,
-    ZhRadioComponent,
-    ZhCheckboxComponent
+    AppComponent
   ],
   imports: [//导入外部组件，模块
     BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    FormsModule,//使用ngmodel指令时，必须导入这个模块，否则报错
+    // AppRoutingModule,
+    // BrowserAnimationsModule,
+    // FormsModule,//使用ngmodel指令时，必须导入这个模块，否则报错
     //HttpClient,//如果要使用httpclient模块与服务器进行通讯，则这个模块需要手动导入，否则在服务模块没有相应的智能提示
-    HttpClientModule,
-    CommonModule,
-    FileUploadModule,
-    ReactiveFormsModule
+    // HttpClientModule,
+    // CommonModule,
+    // FileUploadModule,
+    // ReactiveFormsModule,
+    ViewsModule,
+    ZhCommonModule
   ],
   /*
     路由守卫的类需要放在providers中，providers自动实例化它，使得路由守卫的类起作用
@@ -84,6 +60,6 @@ import { LeaveGuard } from './ng-summary/guard/leave-guard';
   */
   providers: [LoginGuard, LeaveGuard],
   bootstrap: [AppComponent],
-  entryComponents: [DynamicInstanceComponent, ZhAlertComponent]
+  // entryComponents: [DynamicInstanceComponent]
 })
 export class AppModule { }
