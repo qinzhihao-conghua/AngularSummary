@@ -1,11 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CommonDocsComponent } from './common-docs/common-docs.component';
-import { RouterExample } from './router/router-example.component';
-import { RouterChild } from './router/router-child/router-child.component';
-import { RouterChild2 } from './router/router-child2/router-child2.component';
-import { RouterChild3 } from './router/router-child3/router-child3.component';
-import { RouterChild4 } from './router/router-child4/router-child4.component';
 import { PipeExampleComponent } from './pipe-example/pipe-example.component';
 import { MyUperCasePipe } from '../pipe/my-uper-case.pipe';
 import { UploadComponent } from './upload/upload.component';
@@ -26,20 +21,16 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
 import { FileUploadModule } from 'ng2-file-upload';
 import { ZhAlertComponent } from '../zh-common/zh-alert/zh-alert.component';
 import { ZhCommonModule } from '../zh-common/zh-common.module';
+import { DirectiveModule } from '../directive/directive.module';
 
 @NgModule({
   declarations: [
     CommonDocsComponent,
-    RouterExample,
-    RouterChild,
-    RouterChild2,
-    RouterChild3,
-    RouterChild4,
     PipeExampleComponent,
     MyUperCasePipe,
     UploadComponent,
-    HighLightDirective,
-    UnLessDirective,
+    // HighLightDirective,
+    // UnLessDirective,
     AnimationsComponent,
     DynamicFromComponent,
     ReactiveFromComponent,
@@ -47,7 +38,7 @@ import { ZhCommonModule } from '../zh-common/zh-common.module';
     DynamicComponent,
     DynamicInstanceComponent,
     MainContainerComponent,
-    ZhDialogDirective
+    // ZhDialogDirective
   ],
   imports: [
     AppRoutingModule,
@@ -58,20 +49,16 @@ import { ZhCommonModule } from '../zh-common/zh-common.module';
     CommonModule,
     FileUploadModule,
     ReactiveFormsModule,
-    ZhCommonModule
+    ZhCommonModule,
+    DirectiveModule
   ],
   exports: [
     CommonDocsComponent,
-    RouterExample,
-    RouterChild,
-    RouterChild2,
-    RouterChild3,
-    RouterChild4,
     PipeExampleComponent,
     MyUperCasePipe,
     UploadComponent,
-    HighLightDirective,
-    UnLessDirective,
+    // HighLightDirective,
+    // UnLessDirective,
     AnimationsComponent,
     DynamicFromComponent,
     ReactiveFromComponent,
@@ -79,7 +66,7 @@ import { ZhCommonModule } from '../zh-common/zh-common.module';
     DynamicComponent,
     DynamicInstanceComponent,
     MainContainerComponent,
-    ZhDialogDirective
+    // ZhDialogDirective
   ],
   entryComponents: [DynamicInstanceComponent, ZhAlertComponent]
 })

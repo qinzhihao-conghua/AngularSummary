@@ -1,5 +1,5 @@
 import { CanDeactivate } from '@angular/router';
-import { RouterChild4 } from '../views/router/router-child4/router-child4.component';
+import { RouterChild4 } from '../views/router-example/router-child4/router-child4.component';
 
 export class LeaveGuard implements CanDeactivate<RouterChild4>{
     canDeactivate(): boolean {
