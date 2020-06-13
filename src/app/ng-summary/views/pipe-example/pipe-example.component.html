@@ -8,7 +8,10 @@
   <p>CurrencyPipe：数值转化为本地货币格式，纯</p>
   <p>PercentPipe：数值转百分比，纯</p>
   <p>SlicePipe：将数值或者字符串裁剪成新的子集，非纯管道</p>
-  <p>注意：纯管道与非纯管道的区别：只有发生纯变才会调用该管道，这类管道称为纯管道，其余的管道成为非纯管道。
+  <p class="warming">注意：纯管道与非纯管道的区别：只有发生纯变才会调用该管道，这类管道称为纯管道，其余的管道成为非纯管道。
     纯变指的是对基本数据类型（String、Number、Boolean）输入值的变更或者对对象引用（Array、Function、Object）的更改。
     只要数据发生改变，均会触发非纯管道，但不一定会触发纯管道，需要考察数据变化的情形是否为纯变化。</p>
+  <p [zhHighLight]="colorAndSize">高亮管道测试===鼠标移入</p>
+  <p *zhUnLess="condition">自定义结构型指令</p>
+  <button class="btn" (click)="test()">测试自定义结构型指令</button>
 </div>

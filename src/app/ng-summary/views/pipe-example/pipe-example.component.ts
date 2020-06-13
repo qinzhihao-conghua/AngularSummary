@@ -12,10 +12,14 @@ export class PipeExampleComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  condition = false;
+  colorAndSize = { color: 'red', size: '24' };
   uperCaseValue: string;
   onKey() {
     console.log("enter");
+  }
+  test() {
+    this.condition = !this.condition;
   }
 
 }

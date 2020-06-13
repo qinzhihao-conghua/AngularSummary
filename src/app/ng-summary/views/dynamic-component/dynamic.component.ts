@@ -17,7 +17,7 @@ export class DynamicComponent implements OnInit {
     // 注入组件工厂
     private resolve: ComponentFactoryResolver
   ) { }
-
+  opendialog = false;
   ngOnInit() {
   }
   ngAfterContentInit() {
@@ -30,6 +30,14 @@ export class DynamicComponent implements OnInit {
     const component = this.resolve.resolveComponentFactory(DynamicInstanceComponent);
     this.dynamicComponent = this.dynamicContainer.createComponent(component);
     this.dynamicComponent.instance.title = 'ccc';
+  }
+
+  openAlert() {
+    this.opendialog = true;
+  }
+  alertOperation(value) {
+    console.log(value);
+    this.opendialog = false;
   }
 
 }

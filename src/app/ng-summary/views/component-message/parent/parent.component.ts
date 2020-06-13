@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { ChildrenComponent } from '../children/children.component';
+import { ChildrenComponent1 } from '../children1/children1.component';
 import { MessageService } from 'src/app/ng-summary/service/message.service';
 
 @Component({
@@ -33,8 +33,8 @@ export class ParentComponent {
     如此定义之后，childRecive将能够访问ChildrenComponent中所有的属性与方法
     @ViewChild的返回值可以是组件类型，也可以是HTML元素类型ElementRef
   */
-  @ViewChild("childrenComponent")
-  childRecive: ChildrenComponent;
+  @ViewChild("childrenComponent1")
+  childRecive: ChildrenComponent1;
 
   useChildFunction() {
     this.childRecive.childFunction(1);

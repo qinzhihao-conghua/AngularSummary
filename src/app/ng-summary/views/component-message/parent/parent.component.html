@@ -25,7 +25,7 @@
     之后，在这个变量所在的HTML页面的任何位置都能使用这个变量（在模板中书写的DOM、子组件和指令中定义了这个变量，
     那它指向的就是这个DOM、子组件和指令所在的对象），参考“调用子组件的方法2”中click的写法
   -->
-  <children class="parent-children" #childrenComponent [requestData]="sendToChild" (sendToParent)="getOutput($event)">
+  <children1 class="parent-children" #childrenComponent1 [requestData]="sendToChild" (sendToParent)="getOutput($event)">
     <!-- 
       选择器之间是可以写HTML代码片段的，这些片段将会显示在这个组件（outcomponent）的模板中，
       前提之一是这个组件的模板中有调用了ng-content指令，一般的关系是从父组件到子组件，这里
@@ -35,6 +35,7 @@
     <div class="header children-content">这是头：这个是在父组件中的写的代码显示到了子组件中</div>
     <div>这个是在父组件中的写的代码显示到了子组件中</div>
     <div class="footer children-content">这是脚：这个是在父组件中的写的代码显示到了子组件中</div>
-  </children>
+  </children1>
+  <zh-children2></zh-children2>
 
 </div>

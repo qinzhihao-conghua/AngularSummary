@@ -2,4 +2,7 @@
   <h3>动态组件容器</h3>
   <button class="btn" (click)="addNewOne()">再新增一个动态组件</button>
   <div #dynamic></div>
+  <button class="btn" (click)="openAlert()">alert组件</button>
+  <zh-alert *ngIf="opendialog" [title]="'组件实现测试'" [content]="'内容组件实现测试'" (operation)="alertOperation($event)">
+  </zh-alert>
 </div>
