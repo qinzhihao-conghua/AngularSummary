@@ -1,4 +1,3 @@
-<!-- <ng-container *ngFor="let item of receiveData;let i=index;"> -->
 <div *ngFor="let item of receiveData;let i=index;" class="radio-container">
   <input id="{{item.id}}" type="radio" name="{{item.key}}" [checked]="item.check" [disabled]="dsDisabled"
     value="{{item.value}}">
@@ -6,4 +5,3 @@
     <span>{{item.name}}</span>
   </label>
 </div>
-<!-- </ng-container> -->
