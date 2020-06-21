@@ -14,6 +14,8 @@ export class ZhRadioNewComponent implements OnInit {
   textFiled: string;
   @Input()
   valueFiled: string;
+  @Input()
+  defaultValue: object;
 
   @Input()
   set data(value: Array<any>) {
@@ -35,12 +37,21 @@ export class ZhRadioNewComponent implements OnInit {
     } else {
       const random = (Math.floor(Math.random() * 1000000)).toString();
       value.forEach((item, index) => {
-        console.log(typeof item);
         const obj = {
-          name: item[this.textFiled],
-          value: item[this.valueFiled],
-          check: item.check || false,
           key: `radio-${random}`
+        }
+        if (item instanceof Object) {
+          obj['name'] = item[this.textFiled];
+          obj['value'] = item[this.valueFiled];
+          if (this.defaultValue && this.defaultValue[this.valueFiled] === item[this.valueFiled]) {
+            obj['check'] = true;
+          } else {
+            obj['check'] = false;
+          }
+        } else {
+          obj['name'] = item;
+          obj['value'] = item;
+          obj['check'] = false;
         }
         this.receiveData.push(obj);
       });

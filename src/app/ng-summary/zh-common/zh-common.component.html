@@ -10,5 +10,9 @@
       <a routerLink="./checkbox" routerLinkActive="active">checkbox</a>
     </li>
   </ul>
+  <hr>
   <router-outlet></router-outlet>
+  <hr>
+  <zh-radio-new [data]="radioNewData" [textFiled]="'name'" [valueFiled]="'value'" [zhDisabled]="false"
+    (getRadioValue)="getRadioValue($event)" [defaultValue]="{ name: '测试2', value: '2'}"></zh-radio-new>
 </div>
