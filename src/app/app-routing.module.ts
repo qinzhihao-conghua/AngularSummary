@@ -15,6 +15,7 @@ import { FromComponent } from './ng-summary/views/from/from.component';
 import { DynamicComponent } from './ng-summary/views/dynamic-component/dynamic.component';
 import { ZhRadioComponent } from './ng-summary/zh-common/zh-radio/zh-radio.component';
 import { ZhCheckboxComponent } from './ng-summary/zh-common/zh-checkbox/zh-checkbox.component';
+import { ZhRadioNewComponent } from './ng-summary/zh-common/zh-radio-new/zh-radio-new.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/common-docs', pathMatch: 'full' },
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: 'from', component: FromComponent },
   { path: 'dynamic', component: DynamicComponent },
   { path: 'radio', component: ZhRadioComponent },
+  { path: 'radio-new', component: ZhRadioNewComponent },
   { path: 'checkbox', component: ZhCheckboxComponent },
   { path: '**', component: CommonDocsComponent }//通配符
 ];
