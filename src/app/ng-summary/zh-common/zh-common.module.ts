@@ -4,16 +4,20 @@ import { ZhRadioComponent } from './zh-radio/zh-radio.component';
 import { ZhCheckboxComponent } from './zh-checkbox/zh-checkbox.component';
 import { ZhAlertComponent } from './zh-alert/zh-alert.component';
 import { ZhRadioNewComponent } from './zh-radio-new/zh-radio-new.component';
+import { ZhCommonComponent } from './zh-common.component';
+import { ZhCommonRoutingModule } from './zh-common-routing.module';
 
 @NgModule({
   declarations: [
     ZhRadioComponent,
     ZhCheckboxComponent,
     ZhAlertComponent,
-    ZhRadioNewComponent
+    ZhRadioNewComponent,
+    ZhCommonComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ZhCommonRoutingModule
   ],
   exports: [
     ZhRadioComponent,

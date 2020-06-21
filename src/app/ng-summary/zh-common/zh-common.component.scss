@@ -1,0 +1,29 @@
+.zh-common-page {
+  height: 100%;
+  overflow: auto;
+
+  .common-nav {
+    display: flex;
+    flex-wrap: wrap;
+
+    .nav-item {
+      height: 36px;
+      line-height: 24px;
+      margin-bottom: 6px;
+      margin-right: 6px;
+      border-radius: 4px;
+
+      .active {
+        box-shadow: 0 0 4px 1px #bb3ff9 inset;
+        border-radius: 4px;
+      }
+
+      a {
+        padding: 6px;
+        display: inline-block;
+        color: inherit;
+        width: 100%;
+      }
+    }
+  }
+}

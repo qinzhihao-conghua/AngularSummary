@@ -15,12 +15,20 @@ export class ZhRadioComponent implements OnInit {
   @Input()
   set data(value: Array<any>) {
     if (value === undefined || value.length === 0) {
-      this.receiveData = [{
-        name: '轻微',
-        value: '1',
-        id: Math.random().toString(),
-        key: 'demo'
-      }];
+      this.receiveData = [
+        {
+          name: '是',
+          value: '1',
+          id: Math.random().toString(),
+          key: 'demo'
+        },
+        {
+          name: '否',
+          value: '0',
+          id: Math.random().toString(),
+          key: 'demo'
+        }
+      ];
     } else {
       const random = (Math.floor(Math.random() * 1000000)).toString();
       value.forEach((item, index) => {
@@ -40,12 +48,20 @@ export class ZhRadioComponent implements OnInit {
       this.selectedIndex = '-1';
     }
     if (this.receiveData === undefined || this.receiveData.length === 0) {
-      this.receiveData = [{
-        name: '轻微',
-        value: '1',
-        id: Math.random().toString(),
-        key: 'demo'
-      }];
+      this.receiveData = [
+        {
+          name: '是',
+          value: '1',
+          id: Math.random().toString(),
+          key: 'demo'
+        },
+        {
+          name: '否',
+          value: '0',
+          id: Math.random().toString(),
+          key: 'demo'
+        }
+      ];
     }
   }
   radioCheck(value: string, index: string) {
