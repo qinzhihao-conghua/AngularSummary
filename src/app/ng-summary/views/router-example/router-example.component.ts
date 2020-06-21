@@ -12,7 +12,7 @@ export class RouterExample {
   name: string = "张三";
   // 跳转导航的另一种方式
   navigateTO() {
-    this.router.navigate(["router//example/router-child3", { id: "xxxx", name: this.name }]);
+    this.router.navigate(["router/example/router-child3", { id: "xxxx", name: this.name }]);
     // this.router.navigate([{outlets:{auxiliary:'router-child4'}}]);
   }
   // 展示辅助路由
