@@ -15,4 +15,7 @@
   <hr>
   <zh-radio-new [data]="radioNewData" [textFiled]="'name'" [valueFiled]="'value'" [zhDisabled]="false"
     (getRadioValue)="getRadioValue($event)" [defaultValue]="{ name: '测试2', value: '2'}"></zh-radio-new>
+  <hr>
+  <zh-checkbox-new [data]="checkboxNewData" [textFiled]="'name'" [valueFiled]="'value'"
+    (getSelectValues)="getCheckboxValues($event)"></zh-checkbox-new>
 </div>
