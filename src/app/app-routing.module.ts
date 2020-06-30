@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'zh-common',
     loadChildren: './ng-summary/zh-common/zh-common.module#ZhCommonModule'
   },
+  {
+    path: 'zh-css',
+    loadChildren: './ng-summary/zh-css/zh-css.module#ZhCssModule'
+  },
   { path: '**', component: CommonDocsComponent }//通配符
 ];
 

@@ -1,0 +1,46 @@
+@media (max-width: 960px) {
+  .inner {
+    width: 480px;
+  }
+}
+
+@media (max-width: 500px) {
+  .inner {
+    width: 100%;
+  }
+
+  .load-container {
+    width: 100%;
+  }
+}
+
+@import '../../../../assets/css/loading/load1';
+@import '../../../../assets/css/loading/load2';
+@import '../../../../assets/css/loading/load3';
+@import '../../../../assets/css/loading/load4';
+@import '../../../../assets/css/loading/load5';
+@import '../../../../assets/css/loading/load6';
+@import '../../../../assets/css/loading/load7';
+@import '../../../../assets/css/loading/load8';
+
+.loading-page {
+  height: 100%;
+  background: #0dcecb;
+  color: #FFF;
+
+  .inner {
+    // width: 960px;
+    margin: 0 auto;
+
+    .load-container {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      width: 235px;
+      height: 235px;
+      float: left;
+      position: relative;
+      overflow: hidden;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+  }
+}
