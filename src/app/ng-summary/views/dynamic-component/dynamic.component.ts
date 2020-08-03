@@ -9,7 +9,7 @@ import { DynamicInstanceComponent } from './dynamic-instance/dynamic-instance.co
 export class DynamicComponent implements OnInit {
 
   // 拿到动态组件容器
-  @ViewChild("dynamic", { read: ViewContainerRef })
+  @ViewChild("dynamic", { read: ViewContainerRef, static: true })
   dynamicContainer: ViewContainerRef;
   // 定义动态组件对象
   dynamicComponent: ComponentRef<DynamicInstanceComponent>

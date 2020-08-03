@@ -12,11 +12,11 @@ const routes: Routes = [
   { path: 'common-docs', component: CommonDocsComponent },
   {
     path: 'component-message',
-    loadChildren: './ng-summary/views/component-message/component-message.module#ComponentMessageModule'
+    loadChildren: () => import('./ng-summary/views/component-message/component-message.module').then(m => m.ComponentMessageModule)
   },
   {
     path: 'router',
-    loadChildren: './ng-summary/views/router-example/router-example.module#RouterExampleModule'
+    loadChildren: () => import('./ng-summary/views/router-example/router-example.module').then(m => m.RouterExampleModule)
   },
   { path: 'pipe', component: PipeExampleComponent },
   { path: 'upload', component: UploadComponent },
@@ -25,11 +25,11 @@ const routes: Routes = [
   { path: 'dynamic', component: DynamicComponent },
   {
     path: 'zh-common',
-    loadChildren: './ng-summary/zh-common/zh-common.module#ZhCommonModule'
+    loadChildren: () => import('./ng-summary/zh-common/zh-common.module').then(m => m.ZhCommonModule)
   },
   {
     path: 'zh-css',
-    loadChildren: './ng-summary/zh-css/zh-css.module#ZhCssModule'
+    loadChildren: () => import('./ng-summary/zh-css/zh-css.module').then(m => m.ZhCssModule)
   },
   { path: '**', component: CommonDocsComponent }//通配符
 ];
