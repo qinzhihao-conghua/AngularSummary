@@ -1,5 +1,7 @@
 import { CanActivate } from '@angular/router';
+import { Injectable } from "@angular/core";
 
+@Injectable()
 export class LoginGuard implements CanActivate {
     canActivate(): boolean {
         let loginIn: boolean = Math.random() < 0.5;
