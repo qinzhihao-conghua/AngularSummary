@@ -21,18 +21,8 @@ export class ZhRadioNewComponent implements OnInit {
   set data(value: Array<any>) {
     if (value === undefined || value.length === 0) {
       this.receiveData = [
-        {
-          name: '是',
-          value: '1',
-          key: 'demo',
-          check: false
-        },
-        {
-          name: '否',
-          value: '0',
-          key: 'demo',
-          check: false
-        }
+        { name: '是', value: '1', key: 'demo', check: false },
+        { name: '否', value: '0', key: 'demo', check: false }
       ];
     } else {
       const random = (Math.floor(Math.random() * 1000000)).toString();
@@ -64,18 +54,8 @@ export class ZhRadioNewComponent implements OnInit {
   ngOnInit() {
     if (this.receiveData === undefined || this.receiveData.length === 0) {
       this.receiveData = [
-        {
-          name: '是',
-          value: '1',
-          key: 'demo',
-          check: false
-        },
-        {
-          name: '否',
-          value: '0',
-          key: 'demo',
-          check: false
-        }
+        { name: '是', value: '1', key: 'demo', check: false },
+        { name: '否', value: '0', key: 'demo', check: false }
       ];
     }
   }
