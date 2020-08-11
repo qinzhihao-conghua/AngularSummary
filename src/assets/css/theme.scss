@@ -1,13 +1,17 @@
 $light-body-bgc:#f3f3f3;
 $light-body-text:#000;
 
-$light-container-lev1-bgc:#fff;
+$light-container-lev1-bgc:rgba(255, 255, 255, .47);
 $light-container-lev1-text:#000;
 $light-container-lev1-border:null;
 
 $light-container-lev2-bgc:#ffeb3bba;
 $light-container-lev2-text:#000;
 $light-container-lev2-border:null;
+
+$light-container-lev3-bgc:#FFF;
+$light-container-lev3-text:#000;
+$light-container-lev3-border:null;
 
 $light-modal-bgc:#56565699 !default;
 $light-modal-border:null !default;
@@ -36,6 +40,12 @@ $light-button-failed-border:null !default;
     background-color: $light-container-lev2-bgc;
     color: $light-container-lev2-text;
     border-color: $light-container-lev2-border;
+  }
+
+  .container-lev3 {
+    background-color: $light-container-lev3-bgc;
+    color: $light-container-lev3-text;
+    border-color: $light-container-lev3-border;
   }
 
   // 模态框

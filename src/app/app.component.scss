@@ -1,17 +1,28 @@
 .main-header {
-  min-height: 180px;
+  min-height: 120px;
   position: relative;
-  background-image: url('../assets/banner.gif');
-  background-repeat: no-repeat;
-  background-color: #fff;
+  // background-image: url('../assets/img/banner.gif');
+  // background-repeat: no-repeat;
+  // background-color: #fff;
 
-  nav {
+  .nav-container {
+    display: flex;
     position: absolute;
     bottom: 0;
-    margin-left: 100px;
+    left: 0;
+    width: 100%;
+    padding-left: 10%;
+
+    .nav-item {
+      margin: 6px 12px;
+      border-radius: 4px;
+    }
 
     a {
-      margin: 5px 12px;
+      padding: 6px 12px;
+      display: inline-block;
+      color: inherit;
+      width: 100%;
     }
   }
 }
