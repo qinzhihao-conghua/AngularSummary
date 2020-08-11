@@ -5,13 +5,11 @@ import { AppComponent } from './app.component';
 import { ViewsModule } from './ng-summary/views/views.module';
 import { ZhCommonModule } from './ng-summary/zh-common/zh-common.module';
 import { DirectiveModule } from './ng-summary/directive/directive.module';
-import { MainContainerComponent } from './ng-summary/views/main-container/main-container.component';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [//声明本地组件
-    AppComponent,
-    MainContainerComponent
+    AppComponent
   ],
   imports: [//导入外部组件，模块
     AppRoutingModule,

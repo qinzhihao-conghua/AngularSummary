@@ -10,7 +10,8 @@ const routes: Routes = [
     component: ZhCssComponent,
     children: [
       { path: 'loading', component: ZhLoadingComponent },
-      { path: 'button', component: ZhButtonComponent }
+      { path: 'button', component: ZhButtonComponent },
+      { path: '', redirectTo: 'loading', pathMatch: 'full' }
     ]
   }
 ];

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ZhDialogService } from '../service/zh-dialog.service';
 
 @Component({
   selector: 'zh-common',
@@ -7,32 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ZhCommonComponent implements OnInit {
 
-  constructor() { }
-
-  radioNewData = [
-    { name: '测试1', value: '1', other: '其他字段' },
-    { name: '测试2', value: '2', other: '其他字段' },
-    { name: '测试3', value: '3', other: '其他字段' },
-    { name: '测试4', value: '4', other: '其他字段' },
-    { name: '测试5', value: '5', other: '其他字段' },
-    { name: '测试6', value: '6', other: '其他字段' },
-  ]
-  checkboxNewData = [
-    { name: '测试1', value: '1', check: true, other: '其他字段' },
-    { name: '测试2', value: '2', other: '其他字段' },
-    { name: '测试3', value: '3', check: true, other: '其他字段' },
-    { name: '测试4', value: '4', other: '其他字段' },
-    { name: '测试5', value: '5', other: '其他字段' },
-    { name: '测试6', value: '6', other: '其他字段' },
-  ]
+  constructor(
+    private zhDialogService: ZhDialogService,
+  ) { }
 
   ngOnInit() {
   }
-  getRadioValue(value) {
-    console.log('value', value);
-  }
-  getCheckboxValues(value) {
-    console.log('value', value);
+  showDialog() {
+    let dialog = this.zhDialogService.open({
+      title: 'service标题头',
+      content: '弹窗内容===弹窗内容',
+      onlySureBtn: false
+    });
+    dialog.subscribe(data => {
+      console.log('service dialog', data);
+    })
   }
 
 }

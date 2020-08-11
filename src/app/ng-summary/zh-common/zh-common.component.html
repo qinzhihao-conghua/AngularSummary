@@ -1,21 +1,18 @@
-<div class="zh-common-page">
-  <ul class="common-nav">
-    <li class="container-lev2 nav-item">
-      <a routerLink="./radio" routerLinkActive="active">radio</a>
-    </li>
-    <li class="container-lev2 nav-item">
-      <a routerLink="./radio-new" routerLinkActive="active">radio最新</a>
-    </li>
-    <li class="container-lev2 nav-item">
-      <a routerLink="./checkbox" routerLinkActive="active">checkbox</a>
-    </li>
-  </ul>
-  <hr>
-  <router-outlet></router-outlet>
-  <hr>
-  <zh-radio-new [textFiled]="'name'" [valueFiled]="'value'" [data]="radioNewData" [zhDisabled]="false"
-    (getRadioValue)="getRadioValue($event)" [defaultValue]="{ name: '测试2', value: '2'}"></zh-radio-new>
-  <hr>
-  <zh-checkbox-new [textFiled]="'name'" [valueFiled]="'value'" [data]="checkboxNewData"
-    (getSelectValues)="getCheckboxValues($event)"></zh-checkbox-new>
+<div class="main-container-page">
+  <div class="container-lev1  main-container-left">
+    <ul class="nav-container">
+      <li class="container-lev2 nav-item">
+        <a routerLink="./common-comp" routerLinkActive="active">通用组件</a>
+      </li>
+      <li class="container-lev2 nav-item">
+        <a (click)="showDialog()" routerLinkActive="active">弹出框alert</a>
+      </li>
+      <li class="container-lev2 nav-item">
+        <a routerLink="./zh-map" routerLinkActive="active">地图</a>
+      </li>
+    </ul>
+  </div>
+  <div class="container-lev1 main-container-right">
+    <router-outlet></router-outlet>
+  </div>
 </div>

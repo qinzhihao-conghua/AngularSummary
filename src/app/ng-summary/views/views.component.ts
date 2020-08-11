@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ZhDialogService } from '../service/zh-dialog.service';
+import { HttpService } from '../service/http.service';
 
 @Component({
   selector: 'zh-views',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private zhDialogService: ZhDialogService,
+    private http: HttpService
+  ) { }
 
   ngOnInit() {
+  }
+
+  requesrServer() {
+    this.http.getRsponseData().subscribe(data => {
+      console.log(data);
+    });
   }
 
 }
