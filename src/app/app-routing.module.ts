@@ -6,6 +6,7 @@ import { UploadComponent } from './ng-summary/views/upload/upload.component';
 import { AnimationsComponent } from './ng-summary/views/animations/animations.component';
 import { FromComponent } from './ng-summary/views/from/from.component';
 import { DynamicComponent } from './ng-summary/views/dynamic-component/dynamic.component';
+import { ZhOlMapComponent } from './ng-summary/zh-common/zh-ol-map/zh-ol-map.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/common-docs', pathMatch: 'full' },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'animation', component: AnimationsComponent },
   { path: 'from', component: FromComponent },
   { path: 'dynamic', component: DynamicComponent },
+  { path: 'zh-map', component: ZhOlMapComponent },
   {
     path: 'zh-common',
     loadChildren: () => import('./ng-summary/zh-common/zh-common.module').then(m => m.ZhCommonModule)

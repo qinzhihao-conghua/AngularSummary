@@ -7,6 +7,7 @@ import { ZhRadioNewComponent } from './zh-radio-new/zh-radio-new.component';
 import { ZhCommonComponent } from './zh-common.component';
 import { ZhCommonRoutingModule } from './zh-common-routing.module';
 import { ZhCheckboxNewComponent } from './zh-checkbox-new/zh-checkbox-new.component';
+import { ZhOlMapComponent } from './zh-ol-map/zh-ol-map.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ZhCheckboxNewComponent } from './zh-checkbox-new/zh-checkbox-new.compon
     ZhAlertComponent,
     ZhRadioNewComponent,
     ZhCommonComponent,
-    ZhCheckboxNewComponent
+    ZhCheckboxNewComponent,
+    ZhOlMapComponent
   ],
   imports: [
     CommonModule,
