@@ -6,6 +6,7 @@ import { ViewsModule } from './ng-summary/views/views.module';
 import { ZhCommonModule } from './ng-summary/zh-common/zh-common.module';
 import { DirectiveModule } from './ng-summary/directive/directive.module';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [//声明本地组件
@@ -14,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [//导入外部组件，模块
     AppRoutingModule,
     BrowserModule,
+    BrowserAnimationsModule,
     ViewsModule,
     ZhCommonModule,
     DirectiveModule
