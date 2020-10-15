@@ -12,10 +12,15 @@ const routes: Routes = [
     path: '',
     component: ZhCommonComponent,
     children: [
-      { path: 'common-comp', component: CommonCompComponent },
-      { path: 'radio', component: ZhRadioComponent },
-      { path: 'radio-new', component: ZhRadioNewComponent },
-      { path: 'checkbox', component: ZhCheckboxComponent },
+      {
+        path: 'common-comp', component: CommonCompComponent,
+        children: [
+          { path: 'radio', component: ZhRadioComponent },
+          { path: 'radio-new', component: ZhRadioNewComponent },
+          { path: 'checkbox', component: ZhCheckboxComponent },
+          { path: '', redirectTo: 'radio', pathMatch: 'full' }
+        ]
+      },
       { path: 'zh-map', component: ZhOlMapComponent },
       { path: '', redirectTo: 'common-comp', pathMatch: 'full' },
     ]
