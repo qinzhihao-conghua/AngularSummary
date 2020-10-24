@@ -19,6 +19,7 @@ import { ViewsComponent } from './views.component';
 import { ViewRoutingModule } from './views-common-routing.module';
 import { WidthChildChildrenComponent } from './width-child-children/width-child-children.component';
 import { ForViewComponent } from './width-child-children/for-view/for-view.component';
+import { ZhForContentComponent } from './width-child-children/zh-for-content/zh-for-content.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ForViewComponent } from './width-child-children/for-view/for-view.compo
     DynamicInstanceComponent,
     ViewsComponent,
     WidthChildChildrenComponent,
-    ForViewComponent
+    ForViewComponent,
+    ZhForContentComponent
   ],
   imports: [
     FormsModule,//使用ngmodel指令时，必须导入这个模块，否则报错

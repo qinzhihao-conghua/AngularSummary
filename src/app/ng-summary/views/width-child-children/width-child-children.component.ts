@@ -21,7 +21,6 @@ export class WidthChildChildrenComponent implements OnInit {
 
   tip = '';
 
-
   ngOnInit(): void {
   }
 

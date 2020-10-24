@@ -7,4 +7,7 @@
     </ng-container>
     <button (click)="getView()">获取循环出来的组件</button>{{tip}}
     <p>@ContentChild和@ContentChildren是用来获取ng-content中的内容的，也就是获取投影内容</p>
+    <zh-for-content>
+        <div #content>我是投影内容</div>
+    </zh-for-content>
 </div>
