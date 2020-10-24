@@ -13,7 +13,6 @@ import { DynamicInstanceComponent } from './dynamic-component/dynamic-instance/d
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FileUploadModule } from 'ng2-file-upload';
-import { ZhAlertComponent } from '../zh-common/zh-alert/zh-alert.component';
 import { DirectiveModule } from '../directive/directive.module';
 import { ViewsComponent } from './views.component';
 import { ViewRoutingModule } from './views-common-routing.module';
@@ -60,6 +59,6 @@ import { ZhForContentComponent } from './width-child-children/zh-for-content/zh-
     DynamicComponent,
     DynamicInstanceComponent,
   ],
-  entryComponents: [DynamicInstanceComponent, ZhAlertComponent]
+  entryComponents: [DynamicInstanceComponent]
 })
 export class ViewsModule { }
