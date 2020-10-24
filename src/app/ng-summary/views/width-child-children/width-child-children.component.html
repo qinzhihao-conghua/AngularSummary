@@ -1,0 +1,10 @@
+<div>
+    <p>这部分是解释@ViewChild、@ViewChidren和@ContentChild、@ContentChildren的</p>
+    <p>@ViewChild和@ViewChidren是用来获取模板视图中匹配的元素，区别是ViewChild指挥匹配到第一个，ViewChidren是匹配所有</p>
+    <p>如下，通过ngfor循环出的组件</p>
+    <ng-container *ngFor="let item of [1,2,3]; let i=index;">
+        <zh-for-view #view [index]="i"></zh-for-view>
+    </ng-container>
+    <button (click)="getView()">获取循环出来的组件</button>{{tip}}
+    <p>@ContentChild和@ContentChildren是用来获取ng-content中的内容的，也就是获取投影内容</p>
+</div>

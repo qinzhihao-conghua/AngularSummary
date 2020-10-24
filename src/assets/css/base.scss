@@ -9,8 +9,9 @@
   font-size: 16px;
   font-weight: inherit;
   font-style: inherit;
+
   &::before,
-  &::after{
+  &::after {
     box-sizing: border-box;
   }
 }
@@ -40,12 +41,28 @@ h6 {
 }
 
 a,
-a:link {
+a:link,
+a:visited,
+a:hover,
+a:active {
   text-decoration: none;
+  cursor: pointer;
 }
 
-a:hover {
-  cursor: pointer;
+.a-to-btn,
+button {
+  color: #fff;
+  padding: 0.375rem 0.75rem;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #007bff;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  vertical-align: middle;
+}
+
+button+button {
+  margin-left: 12px;
 }
 
 li {
@@ -102,4 +119,8 @@ hr {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgba(128, 241, 63, 0.7);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #2196f3;
 }

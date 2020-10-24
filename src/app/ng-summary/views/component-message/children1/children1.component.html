@@ -1,7 +1,7 @@
 <div class="children">
   <h3>我是子组件1</h3>
   <input type="text" placeholder="往父组件中传入的值" [(ngModel)]="toParent">
-  <button class="btn" (click)="sendToPar()">确定</button>
+  <button (click)="sendToPar()">确定</button>
   <h3>父组件传过来的值:{{requestData}}</h3>
   <br>
   <h3>这是使用ng-content的方式</h3>

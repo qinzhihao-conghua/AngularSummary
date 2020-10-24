@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import './assets/css/base-style.scss';
+@import './assets/css/base.scss';
 @import './assets/css/theme.scss';
 @import './assets/zh-font//style.css';
 
@@ -12,16 +12,4 @@
   background-size: cover;
   background-attachment: fixed;
   // background-position: 25%;
-}
-
-.btn,
-.a-to-btn {
-  color: #fff;
-  padding: 0.375rem 0.75rem;
-  text-decoration: none;
-  display: inline-block;
-  background-color: #007bff;
-  border-radius: 4px;
-  border: 1px solid transparent;
-  vertical-align: middle;
 }

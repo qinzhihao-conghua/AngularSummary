@@ -7,12 +7,13 @@ import { UploadComponent } from './upload/upload.component';
 import { AnimationsComponent } from './animations/animations.component';
 import { FromComponent } from './from/from.component';
 import { DynamicComponent } from './dynamic-component/dynamic.component';
+import { WidthChildChildrenComponent } from './width-child-children/width-child-children.component';
 const routes: Routes = [
   {
     path: '',
     component: ViewsComponent,
     children: [
-      { path: '', redirectTo: 'common-docs', pathMatch: 'full' },
+      { path: 'common-docs', component: CommonDocsComponent },
       {
         path: 'component-message',
         loadChildren: () => import('./component-message/component-message.module').then(m => m.ComponentMessageModule)
@@ -26,7 +27,8 @@ const routes: Routes = [
       { path: 'animation', component: AnimationsComponent },
       { path: 'from', component: FromComponent },
       { path: 'dynamic', component: DynamicComponent },
-      { path: 'common-docs', component: CommonDocsComponent }
+      { path: 'view-ref', component: WidthChildChildrenComponent },
+      { path: '', redirectTo: 'common-docs', pathMatch: 'full' },
     ]
   }
 ];

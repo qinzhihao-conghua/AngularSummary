@@ -13,5 +13,5 @@
     只要数据发生改变，均会触发非纯管道，但不一定会触发纯管道，需要考察数据变化的情形是否为纯变化。</p>
   <p [zhHighLight]="colorAndSize">高亮管道测试===鼠标移入</p>
   <p *zhUnLess="condition">自定义结构型指令</p>
-  <button class="btn" (click)="test()">测试自定义结构型指令</button>
+  <button (click)="test()">测试自定义结构型指令</button>
 </div>

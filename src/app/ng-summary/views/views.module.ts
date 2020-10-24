@@ -17,6 +17,8 @@ import { ZhAlertComponent } from '../zh-common/zh-alert/zh-alert.component';
 import { DirectiveModule } from '../directive/directive.module';
 import { ViewsComponent } from './views.component';
 import { ViewRoutingModule } from './views-common-routing.module';
+import { WidthChildChildrenComponent } from './width-child-children/width-child-children.component';
+import { ForViewComponent } from './width-child-children/for-view/for-view.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ViewRoutingModule } from './views-common-routing.module';
     FromComponent,
     DynamicComponent,
     DynamicInstanceComponent,
-    ViewsComponent
+    ViewsComponent,
+    WidthChildChildrenComponent,
+    ForViewComponent
   ],
   imports: [
     FormsModule,//使用ngmodel指令时，必须导入这个模块，否则报错

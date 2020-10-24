@@ -1,7 +1,7 @@
 <h1>上传组件正常</h1>
 <h3>ng2-file-upload上传</h3>
 <input type="file" ng2FileSelect [uploader]="uploader" (change)="selectedFileOnChanged($event)" />
-<button class="btn" (click)="uploadFile($event)">上传</button>
+<button (click)="uploadFile($event)">上传</button>
 <hr>
 <h3>filereader上传</h3>
 <input type="file" (change)="selectFile($event)" id="inputBox">
