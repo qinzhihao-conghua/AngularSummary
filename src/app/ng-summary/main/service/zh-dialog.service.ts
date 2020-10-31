@@ -1,6 +1,6 @@
 import { Injectable, ComponentFactoryResolver, ViewContainerRef, ComponentRef } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { ZhAlertComponent } from '../zh-common/zh-alert/zh-alert.component';
+import { ZhAlertComponent } from '../../components/zh-common/zh-alert/zh-alert.component';
 
 @Injectable({
   providedIn: 'root'
