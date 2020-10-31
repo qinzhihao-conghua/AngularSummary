@@ -1,10 +1,14 @@
-<div class="export-main">
-    <div class="main-container">
-        <div class="container-top"></div>
+<div class="export-main container-lev1">
+    <div class="main-container" id="downloadContent" #downloadContent>
+        <div class="container-top">
+            <p>这里是相关的介绍</p>
+        </div>
         <div class="container-content">
-            <table border="1" colspan="0" cellspan='0' style="width: 100%;">
+            <table border="1" cellspacing="0" cellpadding="0"
+                style="width: 100%;border: 1px solid #ccc;">
                 <thead>
                     <tr>
+                        <th>姓名</th>
                         <th>语文</th>
                         <th>数学</th>
                         <th>英语</th>
@@ -16,8 +20,50 @@
                         <th>政治</th>
                     </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                    <tr>
+                        <td>张三</td>
+                        <td>87</td>
+                        <td>76</td>
+                        <td>76</td>
+                        <td>47</td>
+                        <td>98</td>
+                        <td>67</td>
+                        <td>98</td>
+                        <td>67</td>
+                        <td>87</td>
+                    </tr>
+                    <tr>
+                        <td>李四</td>
+                        <td>98</td>
+                        <td>87</td>
+                        <td>92</td>
+                        <td>58</td>
+                        <td>73</td>
+                        <td>98</td>
+                        <td>68</td>
+                        <td>80</td>
+                        <td>89</td>
+                    </tr>
+                    <tr>
+                        <td>王五</td>
+                        <td>79</td>
+                        <td>85</td>
+                        <td>96</td>
+                        <td>92</td>
+                        <td>66</td>
+                        <td>73</td>
+                        <td>84</td>
+                        <td>74</td>
+                        <td>94</td>
+                    </tr>
+                </tbody>
             </table>
+        </div>
+        <div class="bottom">
+            <button>
+                <a id="download" download="daochu.doc" (click)="export()">导出Word</a>
+            </button>
         </div>
     </div>
 </div>
