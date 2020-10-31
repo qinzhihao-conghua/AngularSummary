@@ -4,9 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ViewsModule } from './ng-summary/components/views/views.module';
-import { ZhCommonModule } from './ng-summary/components/zh-common/zh-common.module';
-import { DirectiveModule } from './ng-summary/main/directive/directive.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [//声明本地组件
@@ -16,9 +14,7 @@ import { DirectiveModule } from './ng-summary/main/directive/directive.module';
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    ViewsModule,
-    ZhCommonModule,
-    DirectiveModule
+    HttpClientModule,
   ],
   /*
     路由守卫的类需要放在providers中，providers自动实例化它，使得路由守卫的类起作用
