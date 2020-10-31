@@ -8,8 +8,8 @@ import { RouterChild2 } from './router-child2/router-child2.component';
 import { RouterChild3 } from './router-child3/router-child3.component';
 import { RouterChild4 } from './router-child4/router-child4.component';
 import { FormsModule } from '@angular/forms';
-import { LoginGuard } from '../../guard/login-guard';
-import { LeaveGuard } from '../../guard/leave-guard';
+import { LoginGuard } from 'src/app/ng-summary/main/guard/login-guard';
+import { LeaveGuard } from 'src/app/ng-summary/main/guard/leave-guard';
 
 @NgModule({
   declarations: [

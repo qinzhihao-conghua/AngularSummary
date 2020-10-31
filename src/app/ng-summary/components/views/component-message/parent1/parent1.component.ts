@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
+import { MessageService } from 'src/app/ng-summary/main/service/message.service';
 import { Children1Component } from '../children1/children1.component';
-import { MessageService } from 'src/app/ng-summary/service/message.service';
 
 @Component({
   selector: 'zh-parent1',

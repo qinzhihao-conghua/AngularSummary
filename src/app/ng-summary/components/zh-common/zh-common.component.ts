@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ZhDialogService } from '../service/zh-dialog.service';
+import { ZhDialogService } from '../../main/service/zh-dialog.service';
 
 @Component({
   selector: 'zh-common',

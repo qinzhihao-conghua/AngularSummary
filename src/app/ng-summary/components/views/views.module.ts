@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CommonDocsComponent } from './common-docs/common-docs.component';
 import { PipeExampleComponent } from './pipe-example/pipe-example.component';
-import { MyUperCasePipe } from '../pipe/my-uper-case.pipe';
 import { UploadComponent } from './upload/upload.component';
 import { AnimationsComponent } from './animations/animations.component';
 import { DynamicFromComponent } from './from/dynamic-from/dynamic-from.component';
@@ -13,12 +12,13 @@ import { DynamicInstanceComponent } from './dynamic-component/dynamic-instance/d
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FileUploadModule } from 'ng2-file-upload';
-import { DirectiveModule } from '../directive/directive.module';
 import { ViewsComponent } from './views.component';
 import { ViewRoutingModule } from './views-common-routing.module';
 import { WidthChildChildrenComponent } from './width-child-children/width-child-children.component';
 import { ForViewComponent } from './width-child-children/for-view/for-view.component';
 import { ZhForContentComponent } from './width-child-children/zh-for-content/zh-for-content.component';
+import { MyUperCasePipe } from '../../main/pipe/my-uper-case.pipe';
+import { DirectiveModule } from '../../main/directive/directive.module';
 
 @NgModule({
   declarations: [

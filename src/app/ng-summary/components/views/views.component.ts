@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ZhDialogService } from '../service/zh-dialog.service';
-import { HttpService } from '../service/http.service';
+import { HttpService } from '../../main/service/http.service';
+import { ZhDialogService } from '../../main/service/zh-dialog.service';
 
 @Component({
   selector: 'zh-views',

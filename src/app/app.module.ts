@@ -2,11 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ViewsModule } from './ng-summary/views/views.module';
-import { ZhCommonModule } from './ng-summary/zh-common/zh-common.module';
-import { DirectiveModule } from './ng-summary/directive/directive.module';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ViewsModule } from './ng-summary/components/views/views.module';
+import { ZhCommonModule } from './ng-summary/components/zh-common/zh-common.module';
+import { DirectiveModule } from './ng-summary/main/directive/directive.module';
 
 @NgModule({
   declarations: [//声明本地组件
