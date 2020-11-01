@@ -1,0 +1,36 @@
+.gradient-block {
+  background: linear-gradient(to right, #c850c0, #0fff17);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  //   box-decoration-break: clone;
+  //   -webkit-box-decoration-break: clone;
+}
+
+.gradient-inline-default {
+  background: linear-gradient(to right, #c850c0, #0fff17);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  //   box-decoration-break: clone;
+  //   -webkit-box-decoration-break: clone;
+}
+
+.gradient-inline-clone {
+  background: linear-gradient(to right, #c850c0, #0fff17);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.gradient-inline-bgc {
+  background: linear-gradient(to right, #c850c0, #4158d0);
+  border-radius: 6px;
+  //   background-clip: text;
+  //   -webkit-background-clip: text;
+  //   -webkit-text-fill-color: transparent;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}

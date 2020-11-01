@@ -1,0 +1,10 @@
+<ul class="card-container">
+    <li class="card-content" *ngFor="let item of [1,2,3,4] let i=index;">
+        <div class="front container-lev3">前{{i+1}}</div>
+        <div class="back container-lev3">后{{i+1}}</div>
+    </li>
+</ul>
+<hr>
+<ul class="card-container">
+    <li class="card-content card-content1 container-lev3" *ngFor="let item of [1,2,3,4] let i=index;"></li>
+</ul>
