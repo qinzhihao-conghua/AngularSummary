@@ -1,0 +1,86 @@
+.svg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .svg-item {
+    width: 200px;
+    height: 200px;
+
+    .icon {
+      path {
+        fill: transparent;
+        stroke-width: 10;
+        stroke: #b705f7;
+      }
+
+      &.start {
+        path {
+          stroke-dasharray: 3020;
+          stroke-dashoffset: 0;
+        }
+
+        &:hover {
+          path {
+            animation: start 2s linear forwards;
+          }
+        }
+      }
+
+      &.heart {
+        path {
+          stroke-dasharray: 2580;
+          stroke-dashoffset: 0;
+        }
+
+        &:hover {
+          path {
+            animation: heart 1.5s linear forwards;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes start {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  40% {
+    stroke-dashoffset: 3020;
+  }
+
+  80% {
+    stroke-dashoffset: 6040;
+    fill: transparent;
+  }
+
+  100% {
+    stroke-dashoffset: 6040;
+    fill: #b705f7;
+  }
+}
+
+@keyframes heart {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  40% {
+    stroke-dashoffset: 2580;
+    // fill: transparent;
+  }
+
+  80% {
+    stroke-dashoffset: 5160;
+    fill: transparent;
+  }
+
+  100% {
+    stroke-dashoffset: 5160;
+    fill: #b705f7;
+  }
+}
