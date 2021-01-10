@@ -8,9 +8,9 @@ describe('ZhRadioComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ZhRadioComponent ]
+      declarations: [ZhRadioComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,7 +1,10 @@
-<ng-container *ngFor="let item of receiveData;let i=index;">
-  <input id="{{item.tag}}" type="checkbox" name="checkbox" [checked]="item.check" [disabled]="dsDisabled"
-    value="{{item.value}}">
-  <label for="{{item.tag}}" class="label-for-checkbox" [ngClass]="checkStyle(i)" (click)="checkboxSelected(item,i)">
+<div class="zh-checkbox-container" *ngFor="let item of receiveData;let i=index;">
+  <label class="label-for-checkbox  checkbox-check-{{item.check}}  checkbox-disabled-{{zhDisabled}}">
+    <input (click)="checkboxSelected(item,i)"
+      type="checkbox" name="checkbox"
+      [checked]="item.check"
+      [disabled]="dsDisabled"
+      value="{{item.value}}">
     <span>{{item.name}}</span>
   </label>
-</ng-container>
+</div>

@@ -1,57 +1,49 @@
 .radio-container {
-    font-size: inherit;
-    display: inline-block;
-    input[type="radio"] {
-      display: none;
-    }
-    .label-for-radio,
-    .radio-check {
-      font-weight: normal;
+  display: inline-block;
+  font-size: inherit;
+  position: relative;
+
+  input[type='radio'] {
+    display: none;
+  }
+
+  .label-for-radio {
+    margin-right: 12px;
+    cursor: pointer;
+
+    span {
       font-size: inherit;
-      &::before {
-        content: '';
-        border-radius: 50%;
-        display: inline-block;
-        vertical-align: middle;
-        box-sizing: border-box;
-      }
     }
-    .label-for-radio {
-      margin-left: 12px;
-      margin-bottom: 0;
-      cursor: pointer;
-      span {
-        // vertical-align: middle;
-        font-size: inherit;
-      }
-      &::before {
-        width: 14px;
-        height: 14px;
-        margin-right: 8px;
-        border: 1px solid #177DDC;
-        background-clip: content-box;
-        padding: 2px;
-        background-color: transparent;
-      }
-    }
-    input[type="radio"]:checked+.label-for-radio,
-    .radio-check {
-      &::before {
-        background-color: #177DDC;
-      }
-    }
-    input[type="radio"]:checked+.label-for-radio.radio-check-disabled {
-      &::before {
-        border-color: rgba(23, 125, 220, 0.5);
-        background-color: rgba(23, 125, 220, 0.5);
-      }
-    }
-    .radio-check-disabled {
-      color: #ffffff6b;
-      cursor: not-allowed;
-      &::before {
-        border-color: #177ddc80;
-      }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      box-sizing: border-box;
+      border: 1px solid #177DDC;
+      border-radius: 50%;
+      vertical-align: middle;
+      background-clip: content-box;
+      padding: 2px;
+      margin-right: 8px;
     }
   }
-  
+
+  //   选中
+  .radio-check-true {
+    &::before {
+      background-color: #177DDC;
+    }
+  }
+
+  //   禁用
+  .radio-disabled-true {
+    color: rgba(29, 27, 27, 0.5);
+    cursor: not-allowed;
+
+    &::before {
+      border-color: rgba(23, 126, 222, 0.5);
+    }
+  }
+}

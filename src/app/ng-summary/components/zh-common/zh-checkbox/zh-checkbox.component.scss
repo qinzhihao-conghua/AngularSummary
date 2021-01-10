@@ -1,46 +1,41 @@
-input[type="checkbox"] {
+.zh-checkbox-container {
+  display: inline-block;
+  font-size: inherit;
+
+  input[type="checkbox"] {
     display: none;
   }
-  
-  .label-for-checkbox,
-  .checkbox-check {
-    font-weight: normal;
-    position: relative;
-    &::before,
-    &::after {
-      content: '';
-      display: inline-block;
-      vertical-align: middle;
-      box-sizing: border-box;
-    }
-  }
-  
+
   .label-for-checkbox {
-    margin-left: 12px;
-    margin-bottom: 0;
+    margin-right: 12px;
     cursor: pointer;
     position: relative;
+
+    span {
+      font-size: inherit;
+    }
+
     &::before {
+      content: '';
+      display: inline-block;
       width: 14px;
       height: 14px;
-      margin-right: 8px;
+      box-sizing: border-box;
       border: 1px solid #177DDC;
+      vertical-align: middle;
       background-clip: content-box;
       padding: 2px;
-      background-color: transparent;
+      margin-right: 8px;
     }
   }
-  
-  input[type="checkbox"]:checked+.label-for-checkbox,
-  .checkbox-check {
-    //   &::before {
-    //     background-color: #177DDC;
-    //   }
+
+  // 选中
+  .checkbox-check-true {
     &::after {
+      content: '';
       position: absolute;
       left: 4px;
-      top: calc(50% - 7px); // left: 8%;
-      // top: 17%;
+      top: calc(50% - 7px);
       width: 7px;
       height: 14px;
       border-width: 2px;
@@ -51,12 +46,14 @@ input[type="checkbox"] {
       transform: rotate(45deg);
     }
   }
-  
-  .checkbox-check-disabled {
-    color: #ffffff6b;
+
+  //   禁用
+  .checkbox-disabled-true {
+    color: rgba(29, 27, 27, 0.5);
     cursor: not-allowed;
+
     &::before {
-      border-color: #177ddc80 !important;
+      border-color: rgba(29, 27, 27, 0.5) !important;
     }
   }
-  
+}

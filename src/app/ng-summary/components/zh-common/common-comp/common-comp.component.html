@@ -1,21 +1,9 @@
 <div class="zh-common-page">
-  <ul class="common-nav">
-    <li class="container-lev2 nav-item">
-      <a routerLink="./radio" routerLinkActive="active">radio</a>
-    </li>
-    <li class="container-lev2 nav-item">
-      <a routerLink="./radio-new" routerLinkActive="active">radio最新</a>
-    </li>
-    <li class="container-lev2 nav-item">
-      <a routerLink="./checkbox" routerLinkActive="active">checkbox</a>
-    </li>
-  </ul>
-  <hr>
   <router-outlet></router-outlet>
   <hr>
-  <zh-radio-new [textFiled]="'name'" [valueFiled]="'value'" [data]="radioNewData" [zhDisabled]="false"
-    (getRadioValue)="getRadioValue($event)" [defaultValue]="{ name: '测试2', value: '2'}"></zh-radio-new>
+  <zh-radio [textFiled]="'name'" [valueFiled]="'value'" [data]="radioNewData" [zhDisabled]="false"
+    (getRadioValue)="getRadioValue($event)" [defaultValue]="{ name: '测试2', value: '2'}"></zh-radio>
   <hr>
-  <zh-checkbox-new [textFiled]="'name'" [valueFiled]="'value'" [data]="checkboxNewData"
-    (getSelectValues)="getCheckboxValues($event)"></zh-checkbox-new>
+  <zh-checkbox [textFiled]="'name'" [valueFiled]="'value'" [data]="checkboxNewData"
+    (getSelectValues)="getCheckboxValues($event)"></zh-checkbox>
 </div>

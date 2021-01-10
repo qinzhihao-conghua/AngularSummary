@@ -8,9 +8,9 @@ describe('ZhCheckboxComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ZhCheckboxComponent ]
+      declarations: [ZhCheckboxComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

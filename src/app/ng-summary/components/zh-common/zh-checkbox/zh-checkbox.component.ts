@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'zh-checkbox',
@@ -8,63 +8,70 @@ import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 export class ZhCheckboxComponent implements OnInit {
 
   constructor() { }
+  @Input()
+  zhDisabled = false;
+  @Input()
+  textFiled: string;
+  @Input()
+  valueFiled: string;
 
+  @Output()
+  getSelectValues = new EventEmitter<any>();
   @Input()
   set data(value: Array<any>) {
     if (value === undefined || value.length === 0) {
-      this.receiveData = [{
-        name: '轻微',
-        value: '1',
-        tag: Math.random().toString()
-      }];
+      this.receiveData = [
+        { name: '足球', value: '1', check: true },
+        { name: '篮球', value: '2', check: true },
+        { name: '排球', value: '3', check: false }
+      ];
     } else {
       value.forEach((item, index) => {
-        if (item.check) {
-          this.selectedValue.push(item.value);
+        const obj = {};
+        if (item instanceof Object) {
+          obj['name'] = item[this.textFiled];
+          obj['value'] = item[this.valueFiled];
+          obj['check'] = item.check || false;
+        } else {
+          obj['name'] = item;
+          obj['value'] = item;
+          obj['check'] = false;
         }
-        item.tag = Math.random().toString();
-        this.receiveData.push(item);
+        this.receiveData.push(obj);
       });
     }
   }
-  @Input()
-  dsDisabled = false;
-  @Output()
-  getSelectValues = new EventEmitter<Array<any>>();
 
-  selectedIndex: string;
   receiveData = [];
-  selectedValue = [];
 
   ngOnInit() {
-    if (this.dsDisabled) {
-      this.selectedIndex = '-1';
-    }
     if (this.receiveData.length <= 0) {
-      const obj = {
-        name: '轻微',
-        value: '1',
-        tag: Math.random().toString()
-      };
-      this.receiveData.push(obj);
+      this.receiveData = [
+        { name: '足球', value: '1', check: true },
+        { name: '篮球', value: '2', check: true },
+        { name: '排球', value: '3', check: false }
+      ];
     }
   }
-  checkboxSelected(item, i) {
-    if (this.dsDisabled) {
+  checkboxSelected(dataItem: any, index: number) {
+    if (this.zhDisabled) {
       return;
     }
-    if (!this.selectedValue.includes(item.value)) {
-      this.selectedValue.push(item.value);
-    } else {
-      this.selectedValue.splice(this.selectedValue.indexOf(item.value), 1);
-    }
-    this.getSelectValues.emit(this.selectedValue);
-    // console.log('选中', this.selectedValue);
-  }
-  checkStyle(i) {
-    if ('-1' === this.selectedIndex) {
-      return `checkbox-check-disabled`;
-    }
+    const items = [];
+    const values = [];
+    this.receiveData[index].check = !dataItem.check;
+    this.receiveData.forEach(item => {
+      if (item.check) {
+        items.push(item);
+        values.push(item.value);
+      }
+    });
+    const obj = {
+      selectedItems: items,
+      selectedValues: values
+    };
+    // console.log('选择情况', obj);
+    this.getSelectValues.emit(obj);
   }
 
 }
