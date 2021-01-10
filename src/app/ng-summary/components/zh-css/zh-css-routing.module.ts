@@ -7,6 +7,9 @@ import { GradientTextComponent } from './gradient-text/gradient-text.component';
 import { CardComponent } from './card/card.component';
 import { SvgHoverComponent } from './svg-hover/svg-hover.component';
 import { WavesBallComponent } from './waves-ball/waves-ball.component';
+import { EmbossmentBtnComponent } from './embossment-btn/embossment-btn.component';
+import { PopupNavbarComponent } from './popup-navbar/popup-navbar.component';
+import { BilibiliWinterComponent } from './bilibili-winter/bilibili-winter.component';
 
 const routes: Routes = [
   {
@@ -19,6 +22,9 @@ const routes: Routes = [
       { path: 'card', component: CardComponent },
       { path: 'svg', component: SvgHoverComponent },
       { path: 'waves', component: WavesBallComponent },
+      { path: 'embossment', component: EmbossmentBtnComponent },
+      { path: 'popup-nav', component: PopupNavbarComponent },
+      { path: 'bilibili-winter', component: BilibiliWinterComponent },
       { path: '', redirectTo: 'loading', pathMatch: 'full' }
     ]
   }
