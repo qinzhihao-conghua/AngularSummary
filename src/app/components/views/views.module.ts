@@ -57,7 +57,7 @@ import { DirectiveModule } from '../../main/directive/directive.module';
     ReactiveFromComponent,
     FromComponent,
     DynamicComponent,
-    DynamicInstanceComponent,
+    DynamicInstanceComponent
   ],
   entryComponents: [DynamicInstanceComponent]
 })

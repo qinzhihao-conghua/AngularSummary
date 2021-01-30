@@ -6,10 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { DirectiveModule } from './main/directive/directive.module';
+import { MainContainerComponent } from './home/main-container/main-container.component';
+import { LoginComponent } from './home/login/login.component';
 
 @NgModule({
   declarations: [//声明本地组件
-    AppComponent
+    AppComponent, MainContainerComponent, LoginComponent
   ],
   imports: [//导入外部组件，模块
     AppRoutingModule,

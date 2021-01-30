@@ -1,0 +1,24 @@
+<div class="main-header">
+    <ul class="nav-container container-lev2">
+        <li class="nav-item">
+            <a [routerLink]="['base']" routerLinkActive="active">Angular基本知识</a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="['component']" routerLinkActive="active">封装的组件</a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="['css']" routerLinkActive="active">CSS代码片段</a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="['demo']" routerLinkActive="active">demo</a>
+        </li>
+    </ul>
+</div>
+
+<router-outlet></router-outlet>
+
+<div class="main-footer">
+    <div class="footer-content">尾部</div>
+</div>
+
+<div zhDialog></div>
