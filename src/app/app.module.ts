@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { DirectiveModule } from './main/directive/directive.module';
 
 @NgModule({
   declarations: [//声明本地组件
@@ -15,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    DirectiveModule
   ],
   /*
     路由守卫的类需要放在providers中，providers自动实例化它，使得路由守卫的类起作用

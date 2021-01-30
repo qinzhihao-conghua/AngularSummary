@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MessageService } from 'src/app/ng-summary/main/service/message.service';
+import { MessageService } from 'src/app/main/service/message.service';
 
 @Component({
   selector: 'zh-children2',

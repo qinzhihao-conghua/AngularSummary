@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { MessageService } from 'src/app/ng-summary/main/service/message.service';
+import { MessageService } from 'src/app/main/service/message.service';
 import { Children1Component } from '../children1/children1.component';
 
 @Component({
