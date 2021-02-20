@@ -49,6 +49,12 @@ input::-webkit-input-placeholder {
               &::before {
                 width: 100%;
               }
+
+              .icon {
+                path {
+                  fill: #b83af6;
+                }
+              }
             }
           }
         }
@@ -61,6 +67,12 @@ input::-webkit-input-placeholder {
           top: 0;
           left: 0;
           pointer-events: none;
+
+          .icon {
+            position: absolute;
+            left: 12px;
+            top: 42px;
+          }
 
           &::before {
             content: "";
