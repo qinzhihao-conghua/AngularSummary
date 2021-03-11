@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { DemoComponent } from './demo.component';
 import { FileExportComponent } from './file-export/file-export.component';
 import { DemoRoutingModule } from './demo-routing.module';
+import { ExcelImportComponent } from './excel-import/excel-import.component';
 
 
 
 @NgModule({
-  declarations: [DemoComponent, FileExportComponent],
+  declarations: [DemoComponent, FileExportComponent, ExcelImportComponent],
   imports: [
     CommonModule,
     DemoRoutingModule

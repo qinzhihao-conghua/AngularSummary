@@ -1,0 +1,59 @@
+<table border="1" cellspacing="0" cellpadding="0"
+  style="width: 100%;border: 1px solid #ccc;">
+  <thead>
+    <tr>
+      <th>姓名</th>
+      <th>语文</th>
+      <th>数学</th>
+      <th>英语</th>
+      <th>物理</th>
+      <th>化学</th>
+      <th>生物</th>
+      <th>历史</th>
+      <th>地理</th>
+      <th>政治</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>张三</td>
+      <td>87</td>
+      <td>76</td>
+      <td>76</td>
+      <td>47</td>
+      <td>98</td>
+      <td>67</td>
+      <td>98</td>
+      <td>67</td>
+      <td>87</td>
+    </tr>
+    <tr>
+      <td>李四</td>
+      <td>98</td>
+      <td>87</td>
+      <td>92</td>
+      <td>58</td>
+      <td>73</td>
+      <td>98</td>
+      <td>68</td>
+      <td>80</td>
+      <td>89</td>
+    </tr>
+    <tr>
+      <td>王五</td>
+      <td>79</td>
+      <td>85</td>
+      <td>96</td>
+      <td>92</td>
+      <td>66</td>
+      <td>73</td>
+      <td>84</td>
+      <td>74</td>
+      <td>94</td>
+    </tr>
+  </tbody>
+</table>
+<!-- <button class="theme-button" (click)="importExcel()">导入Excel</button> -->
+
+<input type="file" (change)="importExcel($event)" multiple="false" />
+<div [innerHtml]="html"></div>
