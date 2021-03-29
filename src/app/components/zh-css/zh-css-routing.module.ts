@@ -9,7 +9,7 @@ import { SvgHoverComponent } from './svg-hover/svg-hover.component';
 import { WavesBallComponent } from './waves-ball/waves-ball.component';
 import { EmbossmentBtnComponent } from './embossment-btn/embossment-btn.component';
 import { PopupNavbarComponent } from './popup-navbar/popup-navbar.component';
-import { BilibiliWinterComponent } from './bilibili-winter/bilibili-winter.component';
+import { BilibiliWinterComponent } from '../../home/bilibili-winter/bilibili-winter.component';
 
 const routes: Routes = [
   {

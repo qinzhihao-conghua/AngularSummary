@@ -8,10 +8,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { DirectiveModule } from './main/directive/directive.module';
 import { MainContainerComponent } from './home/main-container/main-container.component';
 import { LoginComponent } from './home/login/login.component';
+import { BilibiliWinterComponent } from './home/bilibili-winter/bilibili-winter.component';
+import { BilibiliSpringComponent } from './home/bilibili-spring/bilibili-spring.component';
 
 @NgModule({
   declarations: [//声明本地组件
-    AppComponent, MainContainerComponent, LoginComponent
+    AppComponent, MainContainerComponent, LoginComponent, BilibiliWinterComponent, BilibiliSpringComponent
   ],
   imports: [//导入外部组件，模块
     AppRoutingModule,

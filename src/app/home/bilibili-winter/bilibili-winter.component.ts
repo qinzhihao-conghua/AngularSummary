@@ -14,19 +14,19 @@ export class BilibiliWinterComponent implements OnInit {
 
   ngOnInit(): void {
     let startingPoint;
-    const header = document.querySelector('header');
+    const header = document.querySelector('.winter') as HTMLElement;
 
-    header.addEventListener('mouseenter', (e) => {
+    header.addEventListener('mouseenter', (e: MouseEvent) => {
       startingPoint = e.clientX;
       header.classList.add('moving');
     })
 
-    header.addEventListener('mouseout', (e) => {
+    header.addEventListener('mouseout', (e: MouseEvent) => {
       header.classList.remove('moving');
       header.style.setProperty('--percentage', '0.5');
     })
 
-    header.addEventListener('mousemove', (e) => {
+    header.addEventListener('mousemove', (e: MouseEvent) => {
       let percentage = (e.clientX - startingPoint) / window.outerWidth + 0.5;
 
       header.style.setProperty('--percentage', percentage.toString());

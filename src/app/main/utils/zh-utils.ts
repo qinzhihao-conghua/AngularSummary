@@ -106,14 +106,14 @@ export class ZhUtils {
                 }
             })
             if (index > -1) {
-                prevValue[index].projectAndScore.push({
+                prevValue[index].group.push({
                     project: currentValue.project,
                     score: currentValue.score
                 })
             } else {
                 prevValue.push({
                     filed: currentValue[filed],
-                    projectAndScore: [{
+                    group: [{
                         project: currentValue.project,
                         score: currentValue.score
                     }]
