@@ -28,4 +28,8 @@ export class HttpService {
   uploadFile(fileData: string | ArrayBuffer): Observable<any> {
     return this.httpService.post<string>("fileReader/", fileData);
   }
+
+  getJsonTest() {
+    return this.httpService.get("assets/json/test.json");
+  }
 }

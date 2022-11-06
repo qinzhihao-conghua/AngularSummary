@@ -6,20 +6,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { DirectiveModule } from './main/directive/directive.module';
-import { MainContainerComponent } from './home/main-container/main-container.component';
-import { LoginComponent } from './home/login/login.component';
-import { BilibiliWinterComponent } from './home/bilibili-winter/bilibili-winter.component';
-import { BilibiliSpringComponent } from './home/bilibili-spring/bilibili-spring.component';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [//声明本地组件
-    AppComponent, MainContainerComponent, LoginComponent, BilibiliWinterComponent, BilibiliSpringComponent
+    AppComponent,
   ],
   imports: [//导入外部组件，模块
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    HomeModule,
     DirectiveModule
   ],
   /*

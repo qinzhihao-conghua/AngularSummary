@@ -1,31 +1,6 @@
 <div class="main-container-page">
   <div class="container-lev1  main-container-left">
-    <ul class="nav-container">
-      <li class="container-lev2 nav-item">
-        <a routerLink="./loading" routerLinkActive="active">loading</a>
-      </li>
-      <li class="container-lev2 nav-item">
-        <a routerLink="./button" routerLinkActive="active">button</a>
-      </li>
-      <li class="container-lev2 nav-item">
-        <a routerLink="./gradient-text" routerLinkActive="active">渐变文字</a>
-      </li>
-      <li class="container-lev2 nav-item">
-        <a routerLink="./card" routerLinkActive="active">卡片效果</a>
-      </li>
-      <li class="container-lev2 nav-item">
-        <a routerLink="./svg" routerLinkActive="active">svg动画</a>
-      </li>
-      <li class="container-lev2 nav-item">
-        <a routerLink="./waves" routerLinkActive="active">波浪球</a>
-      </li>
-      <li class="container-lev2 nav-item">
-        <a routerLink="./embossment" routerLinkActive="active">新拟态按钮</a>
-      </li>
-      <li class="container-lev2 nav-item">
-        <a routerLink="./popup-nav" routerLinkActive="active">浮动菜单</a>
-      </li>
-    </ul>
+    <zh-left-sidebar [sideBarMenu]="sideBarMenu"></zh-left-sidebar>
   </div>
   <div class="container-lev1 main-container-right">
     <router-outlet></router-outlet>

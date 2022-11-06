@@ -1,0 +1,9 @@
+<ul class="nav-container">
+    <li class="container-lev2 nav-item" *ngFor="let item of sideBarMenu">
+
+        <a [routerLink]="item.url" routerLinkActive="active" *ngIf="item.url;else commATemplate">{{item.title}}</a>
+        <ng-template #commATemplate>
+            <a (click)="clickHandle(item)" routerLinkActive="active">{{item.title}}</a>
+        </ng-template>
+    </li>
+</ul>

@@ -11,6 +11,11 @@ export class ZhCommonComponent implements OnInit {
   constructor(
     private zhDialogService: ZhDialogService,
   ) { }
+  sideBarMenu = [
+    { url: './common-comp', title: '通用组件' },
+    { url: '', title: '弹出框alert' },
+    { url: './zh-map', title: '地图' },
+  ];
 
   ngOnInit() {
   }
@@ -23,6 +28,11 @@ export class ZhCommonComponent implements OnInit {
     dialog.subscribe(data => {
       console.log('service dialog', data);
     })
+  }
+  clickHandle(value) {
+    if (value && value.title === '弹出框alert') {
+      this.showDialog();
+    }
   }
 
 }

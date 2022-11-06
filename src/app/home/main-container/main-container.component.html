@@ -1,6 +1,6 @@
 <div class="main-header">
-    <!-- <zh-bilibili-winter></zh-bilibili-winter> -->
-    <zh-bilibili-spring></zh-bilibili-spring>
+    <zh-bilibili-winter></zh-bilibili-winter>
+    <!-- <zh-bilibili-spring></zh-bilibili-spring> -->
 </div>
 <ul class="nav-container container-lev2">
     <li class="nav-item">
@@ -15,6 +15,9 @@
     <li class="nav-item">
         <a [routerLink]="['demo']" routerLinkActive="active">demo</a>
     </li>
+    <li class="nav-item">
+        <a [routerLink]="['skill']" routerLinkActive="active">技能点</a>
+    </li>
 </ul>
 
 <router-outlet></router-outlet>
@@ -22,5 +25,3 @@
 <div class="main-footer">
     <div class="footer-content">尾部</div>
 </div>
-
-<div zhDialog></div>

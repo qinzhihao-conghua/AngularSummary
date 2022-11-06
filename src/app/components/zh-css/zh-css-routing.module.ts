@@ -10,6 +10,7 @@ import { WavesBallComponent } from './waves-ball/waves-ball.component';
 import { EmbossmentBtnComponent } from './embossment-btn/embossment-btn.component';
 import { PopupNavbarComponent } from './popup-navbar/popup-navbar.component';
 import { BilibiliWinterComponent } from '../../home/bilibili-winter/bilibili-winter.component';
+import { BackdropFilterComponent } from './backdrop-filter/backdrop-filter.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,7 @@ const routes: Routes = [
       { path: 'embossment', component: EmbossmentBtnComponent },
       { path: 'popup-nav', component: PopupNavbarComponent },
       { path: 'bilibili-winter', component: BilibiliWinterComponent },
+      { path: 'backdrop-filter', component: BackdropFilterComponent },
       { path: '', redirectTo: 'loading', pathMatch: 'full' }
     ]
   }

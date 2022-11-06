@@ -11,11 +11,25 @@ import { SvgHoverComponent } from './svg-hover/svg-hover.component';
 import { WavesBallComponent } from './waves-ball/waves-ball.component';
 import { EmbossmentBtnComponent } from './embossment-btn/embossment-btn.component';
 import { PopupNavbarComponent } from './popup-navbar/popup-navbar.component';
+import { BackdropFilterComponent } from './backdrop-filter/backdrop-filter.component';
+import { HomeModule } from 'src/app/home/home.module';
 
 @NgModule({
-  declarations: [ZhCssComponent, ZhLoadingComponent, ZhButtonComponent, GradientTextComponent, CardComponent, SvgHoverComponent, WavesBallComponent, EmbossmentBtnComponent, PopupNavbarComponent],
+  declarations: [
+    ZhCssComponent,
+    ZhLoadingComponent,
+    ZhButtonComponent,
+    GradientTextComponent,
+    CardComponent,
+    SvgHoverComponent,
+    WavesBallComponent,
+    EmbossmentBtnComponent,
+    PopupNavbarComponent,
+    BackdropFilterComponent
+  ],
   imports: [
     CommonModule,
+    HomeModule,
     ZhCssRoutingModule
   ]
 })

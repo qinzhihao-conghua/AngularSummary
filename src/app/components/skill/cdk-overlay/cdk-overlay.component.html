@@ -1,0 +1,25 @@
+<section>
+    <button (click)="openCDK(0)">打开弹窗,中心位置</button>
+    <button (click)="openCDK(100)">打开弹窗,top100</button>
+    <button (click)="byConnectedTo('component')" #byCompOri>依赖触发点打开弹窗展示组件</button>
+    <button (click)="byConnectedTo('template')" #byTempOri>依赖触发点打开弹窗展示ng-template</button>
+    <button (click)="direOpen=!direOpen" #trigger="cdkOverlayOrigin" cdk-overlay-origin>指令的方式展示</button>
+</section>
+<!-- 使用ng-template的方式要先导入PortalModule，然后在添加cdk-portal指令以及cdkPortal -->
+<ng-template cdk-portal #tempContent="cdkPortal">
+    <div style="background-color: aliceblue;">
+        <p>我是ng-template里的内容</p>
+        <p>我是ng-template里的内容</p>
+        <p>我是ng-template里的内容</p>
+        <p>我是ng-template里的内容</p>
+    </div>
+</ng-template>
+<ng-template cdk-connected-overlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayWidth]="200"
+    [cdkConnectedOverlayHasBackdrop]="true" [cdkConnectedOverlayOpen]="direOpen" (backdropClick)="direOpen=false">
+    <div style="background-color: aliceblue;">
+        <p>我是通过指令出现的内容</p>
+        <p>我是通过指令出现的内容</p>
+        <p>我是通过指令出现的内容</p>
+        <p>我是通过指令出现的内容</p>
+    </div>
+</ng-template>

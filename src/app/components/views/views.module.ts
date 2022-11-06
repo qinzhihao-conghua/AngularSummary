@@ -10,7 +10,7 @@ import { FromComponent } from './from/from.component';
 import { DynamicComponent } from './dynamic-component/dynamic.component';
 import { DynamicInstanceComponent } from './dynamic-component/dynamic-instance/dynamic-instance.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FileUploadModule } from 'ng2-file-upload';
 import { ViewsComponent } from './views.component';
 import { ViewRoutingModule } from './views-common-routing.module';
@@ -19,6 +19,9 @@ import { ForViewComponent } from './width-child-children/for-view/for-view.compo
 import { ZhForContentComponent } from './width-child-children/zh-for-content/zh-for-content.component';
 import { MyUperCasePipe } from '../../main/pipe/my-uper-case.pipe';
 import { DirectiveModule } from '../../main/directive/directive.module';
+import { HttpExampleComponent } from './http-example/http-example.component';
+import { InterceptorDemoInterceptor } from './http-example/interceptor-demo.interceptor';
+import { HomeModule } from 'src/app/home/home.module';
 
 @NgModule({
   declarations: [
@@ -35,13 +38,14 @@ import { DirectiveModule } from '../../main/directive/directive.module';
     ViewsComponent,
     WidthChildChildrenComponent,
     ForViewComponent,
-    ZhForContentComponent
+    ZhForContentComponent,
+    HttpExampleComponent
   ],
   imports: [
     FormsModule,//使用ngmodel指令时，必须导入这个模块，否则报错
-    //HttpClient,//如果要使用httpclient模块与服务器进行通讯，则这个模块需要手动导入，否则在服务模块没有相应的智能提示
-    HttpClientModule,
     CommonModule,
+    HomeModule,
+    HttpClientModule,
     FileUploadModule,
     ReactiveFormsModule,
     DirectiveModule,
@@ -58,6 +62,9 @@ import { DirectiveModule } from '../../main/directive/directive.module';
     FromComponent,
     DynamicComponent,
     DynamicInstanceComponent
+  ],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: InterceptorDemoInterceptor, multi: true }
   ],
   entryComponents: [DynamicInstanceComponent]
 })

@@ -7,6 +7,7 @@ import { ZhCommonRoutingModule } from './zh-common-routing.module';
 import { ZhCheckboxComponent } from './zh-checkbox/zh-checkbox.component';
 import { ZhOlMapComponent } from './zh-ol-map/zh-ol-map.component';
 import { CommonCompComponent } from './common-comp/common-comp.component';
+import { HomeModule } from 'src/app/home/home.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CommonCompComponent } from './common-comp/common-comp.component';
   ],
   imports: [
     CommonModule,
+    HomeModule,
     ZhCommonRoutingModule
   ],
   exports: [
