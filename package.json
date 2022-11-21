@@ -24,7 +24,7 @@
     "core-js": "^2.5.4",
     "file-saver": "^2.0.2",
     "ng2-file-upload": "^1.4.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "ol": "^6.4.3",
     "print-js": "^1.6.0",
     "rxjs": "~6.6.2",
